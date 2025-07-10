@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import { IconLink } from '@/components';
 
 type NavLinkProps =
   | { name: string; href: string; button?: false; className?: string }
@@ -15,27 +16,6 @@ function NavLink({ name, href, button, className }: NavLinkProps) {
   ) : (
     <Link href={href} className={`${combStyle}`}>
       {name}
-    </Link>
-  );
-}
-
-const IconLinks = [
-  { href: '#', name: 'Instagram' },
-  { href: '#', name: 'Pinterest' },
-  { href: '#', name: 'Facebook' },
-  { href: '#', name: 'Twitter' },
-  { href: '#', name: 'Telegram' },
-];
-
-interface IconLinkProps {
-  href: string;
-  name: string;
-}
-
-function IconLink({ href, name }: IconLinkProps) {
-  return (
-    <Link href={href} aria-label={`${name} link`}>
-      <img src={`/icons/${name}.svg`} alt={`${name} icon`} className="size-6" />
     </Link>
   );
 }
@@ -90,11 +70,7 @@ export default function Nav() {
             Privacy policy
           </Link>
         </div>
-        <div className="p-6 flex justify-between gap-2 lg:hidden">
-          {IconLinks.map((icon, index) => (
-            <IconLink key={index} {...icon} />
-          ))}
-        </div>
+        <IconLink center />
       </div>
       <button
         aria-label="open cart"
