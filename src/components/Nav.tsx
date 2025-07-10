@@ -48,7 +48,12 @@ export default function Nav() {
         onClick={() => {
           setIsOpen(false);
         }}
-        className={`backdrop-blur-xs w-full h-full absolute top-0 left-0 ${isOpen ? 'block' : 'hidden'} lg:hidden`}></div>
+        className={`backdrop-blur-xs w-full h-full absolute top-0 ease-linear transition-opacity ${isOpen ? 'opacity-100 left-0' : 'opacity-0 -left-full'} lg:hidden`}
+        style={{
+          transitionProperty: 'opacity, left',
+          transitionDuration: '300ms, 0ms',
+          transitionDelay: isOpen ? '0ms, 0ms' : '0ms, 300ms',
+        }}></div>
       <button
         onClick={() => {
           setIsOpen(true);
