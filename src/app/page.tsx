@@ -106,9 +106,11 @@ export default function Home() {
         </div>
       </header>
       <section className="border-r border-b border-base-900 lg:grid lg:grid-cols-4">
-        <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20 border-b border-base-900 lg:border-b-0 lg:col-span-2 border-l lg:sticky lg:self-start top-20">
-          About us
-        </h2>
+        <div className="border-b border-base-900 lg:border-b-0 lg:col-span-2 border-l">
+          <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20  lg:sticky lg:self-start top-20">
+            About us
+          </h2>
+        </div>
         <div className="px-4 py-10 md:p-20 border-l border-base-900 lg:col-span-2">
           <h3 className="uppercase font-medium text-xs mb-6 md:text-sm">our story</h3>
           <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Norr Collective</h4>
@@ -126,6 +128,47 @@ export default function Home() {
             className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center w-full md:w-44">
             Learn more
           </Link>
+        </div>
+      </section>
+      <section className="border-r border-b border-base-900 lg:grid lg:grid-cols-4">
+        <div className="border-b border-base-900 lg:border-b-0 lg:col-span-2 border-l">
+          <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20  lg:sticky lg:self-start top-20">
+            Why choose us ?
+          </h2>
+        </div>
+        <div className="lg:col-span-2">
+          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
+            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Timeless pieces by curators</h4>
+            <p className="leading-snug">
+              At our furniture studio, design experts carefully select authentic and iconic items from the mid-20th
+              century. Each piece is chosen for its elegance, craftsmanship, and ability to transform a space. We follow
+              global design trends while honoring classic aesthetics — so your interior feels refined, lived-in, and
+              timeless.
+            </p>
+          </div>
+          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
+            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">On-time delivery</h4>
+            <p className="leading-snug">
+              Never miss a moment with our punctual and careful delivery service. All furniture is brought to you in
+              perfect condition — no unnecessary packaging, no delays. Your chosen piece arrives ready to take its place
+              in your home, exactly as intended.
+            </p>
+          </div>
+          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
+            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Safe payment</h4>
+            <p className="leading-snug">
+              We use secure, industry-standard technology to protect your payment and personal data. Ordering is smooth,
+              encrypted, and safe — so you can focus on the beauty of great design without any hassle.
+            </p>
+          </div>
+          <div className="px-4 py-10 md:p-20 border-l border-base-900 lg:col-span-2">
+            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Support at every step</h4>
+            <p className="leading-snug">
+              From selection to delivery, our team is here to assist you with every detail. Whether you’re furnishing a
+              room or building a collection, we offer personal guidance to help you find pieces that reflect your style
+              and fit your space — easily and confidently.
+            </p>
+          </div>
         </div>
       </section>
     </>

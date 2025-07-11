@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IconLink } from '@/components';
-import { Categories } from '@/data';
+import { Products } from '@/data';
 
 export default function Footer() {
   return (
@@ -48,9 +48,12 @@ export default function Footer() {
       <div className="py-10 px-4 md:p-10 border-r border-b border-base-900 flex flex-col gap-4 md:gap-6">
         <h2 className="text-base-500 font-medium text-lg md:text-xl">Shop</h2>
         <div className="flex flex-col gap-2">
-          {Categories.map((cat, index) => (
-            <Link key={index} href={cat.href} className="text-sm font-medium md:text-base w-fit tracking-[2.5%]">
-              {cat.name}
+          {Products.map((cat, index) => (
+            <Link
+              key={index}
+              href={`/shop${cat.href}`}
+              className="text-sm font-medium md:text-base w-fit tracking-[2.5%] capitalize">
+              {cat.category}
             </Link>
           ))}
         </div>
