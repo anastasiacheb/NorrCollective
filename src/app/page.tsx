@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Products } from '@/data';
+import { IconLink } from '@/components';
 
 // type Product = {
 //   name: string;
@@ -132,7 +133,7 @@ export default function Home() {
       </section>
       <section className="border-r border-b border-base-900 lg:grid lg:grid-cols-4">
         <div className="border-b border-base-900 lg:border-b-0 lg:col-span-2 border-l">
-          <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20  lg:sticky lg:self-start top-20">
+          <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20 lg:sticky lg:self-start top-20 whitespace-nowrap">
             Why choose us ?
           </h2>
         </div>
@@ -168,6 +169,73 @@ export default function Home() {
               room or building a collection, we offer personal guidance to help you find pieces that reflect your style
               and fit your space — easily and confidently.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+        <div className="border-b border-base-900 lg:order-2 grid grid-cols-2">
+          <div className="border-b border-l border-base-900 col-span-2 overflow-clip lg:h-[calc(100dvh-92px-79px)] flex items-center justify-center">
+            <Image
+              src="/images/DSC_3649-scaled.jpg"
+              alt="chair"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-full object-cover aspect-[375/420] md:aspect-[768/500] lg:aspect-auto lg:h-auto"
+            />
+          </div>
+          <div className="p-4 pb-2 border-l font-medium text-[26px] col-span-2 md:col-span-1 md:px-10 md:py-4 md:text-[38px] md:text-center">
+            Follow us
+          </div>
+          <div className="p-4 pt-2 col-span-2 md:col-span-1 md:border-l md:border-base-900 md:flex md:p-0 md:justify-center md:items-center">
+            <IconLink />
+          </div>
+        </div>
+        <div className="border-l border-b border-base-900 md:grid md:grid-cols-2 lg:grid-rows-2 lg:h-[calc(100dvh-90px)]">
+          <div className="py-10 px-4 md:p-20 border-b border-base-900 md:col-span-2">
+            <h2 className="font-semibold text-[34px] md:text-[50px] mb-6 ">To Contact Us</h2>
+            <p className="text-lg leading-snug font-medium mb-4">We will call you back</p>
+            <form action="#" className="flex flex-col gap-4 md:grid md:grid-cols-2">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="+46 8 XXX XX XXX"
+                className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
+              />
+              <button
+                type="submit"
+                className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center">
+                book a call
+              </button>
+            </form>
+          </div>
+          <div className="border-base-900 md:border-r md:-mr-[0.5px]">
+            <h3 className="p-4 font-medium text-[26px] md:text-[38px] border-b border-base-900 md:text-center">
+              Phone
+            </h3>
+            <div className="px-4 py-10 flex flex-col gap-4 border-base-900 border-b md:border-0 lg:justify-center md:items-center lg:h-[calc(100%-80px)]">
+              <div className="flex gap-0.5 items-center">
+                <img src="/icons/call.svg" alt="icon" className="size-6" />
+                <p className="font-semibold">+46 8 123 45 678</p>
+              </div>
+              <div className="flex gap-0.5 items-center">
+                <img src="/icons/call.svg" alt="icon" className="size-6" />
+                <p className="font-semibold">+46 8 123 45 678</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-base-900  md:-mr-[0.5px]">
+            <h3 className="p-4 font-medium text-[26px] md:text-[38px] border-b border-base-900 md:text-center">
+              Address
+            </h3>
+            <div className="px-4 py-10 flex flex-col gap-4 border-base-900 md:border-0 lg:justify-center md:items-center lg:h-[calc(100%-80px)]">
+              <p className="uppercase text-xs md:text-sm">opening hours: 8 to 11 p.m.</p>
+              <div className="flex gap-0.5 items-center">
+                <img src="/icons/pin_drop.svg" alt="icon" className="size-6" />
+                <p className="font-semibold">Hälsingegatan 49, Stockholm</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
