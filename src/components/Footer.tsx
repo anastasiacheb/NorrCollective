@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="border-l border-base-900 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div className="py-10 px-4 md:p-10 border-r border-b border-base-900 flex flex-col gap-4 md:gap-6">
-        <p>
+        <p className="leading-snug">
           Stay inspired by timeless design — Norr Collective reminds you of seasonal collections, special drops &
           interior moments. <br />
           We’ll send a gentle nudge 7 days in advance. No spam. No sharing. Just design.

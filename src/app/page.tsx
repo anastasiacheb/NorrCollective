@@ -60,7 +60,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
           width={0}
           height={0}
           sizes="100vw"
-          className="w-full h-auto object-cover group-hover:scale-110 transition-all ease-linear duration-200"
+          className="w-full h-auto lg:h-full lg:w-full object-cover group-hover:scale-110 transition-all ease-linear duration-200"
         />
       </Link>
     </div>
@@ -73,7 +73,7 @@ export default function Home() {
       <header className="border-r border-base-900 lg:grid lg:grid-cols-4 mt-12.5 md:mt-14.5 lg:mt-23">
         <div className="px-4 py-10 md:p-20 border-l border-b border-base-900 flex flex-col gap-6 md:gap-14 lg:h-[calc(100dvh-92px)] lg:justify-between lg:gap-6 lg:sticky lg:top-23 lg:self-start lg:col-span-2">
           <div>
-            <h1 className="font-medium text-[40px] pb-4 md:font-semibold md:text-[67px]">
+            <h1 className="text-[40px] pb-4 font-semibold md:text-[67px]">
               Norr <br /> Collective
             </h1>
             <p className="text-base md:text-lg">
@@ -105,6 +105,29 @@ export default function Home() {
           ))}
         </div>
       </header>
+      <section className="border-r border-b border-base-900 lg:grid lg:grid-cols-4">
+        <h2 className="font-semibold text-[34px] md:text-[50px] px-4 py-10 md:p-20 border-b border-base-900 lg:border-b-0 lg:col-span-2 border-l lg:sticky lg:self-start top-20">
+          About us
+        </h2>
+        <div className="px-4 py-10 md:p-20 border-l border-base-900 lg:col-span-2">
+          <h3 className="uppercase font-medium text-xs mb-6 md:text-sm">our story</h3>
+          <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Norr Collective</h4>
+          <p className="leading-snug mb-16">
+            We are a modern furniture studio specializing in curated collections of timeless design. Our pieces are
+            handpicked with care — each item tells a story of thoughtful craftsmanship and aesthetic clarity. We work
+            directly with trusted collectors and galleries across Europe to ensure authenticity and impeccable
+            condition. In our collection, you’ll find iconic mid-century furniture, elegant lighting, refined decor
+            objects, and rare design finds to elevate any space. Add character to your interior or surprise someone
+            special with a meaningful design gift — available for same or next-day delivery. Bringing design into your
+            life has never been easier.
+          </p>
+          <Link
+            href="/about"
+            className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center w-full md:w-44">
+            Learn more
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
