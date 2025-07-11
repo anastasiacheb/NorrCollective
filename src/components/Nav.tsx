@@ -23,12 +23,12 @@ function NavLink({ name, href, button, className }: NavLinkProps) {
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8">
+    <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-dvw z-50 bg-base-0">
       <div
         onClick={() => {
           setIsOpen(false);
         }}
-        className={`backdrop-blur-xs w-full h-full absolute top-0 ease-linear transition-opacity ${isOpen ? 'opacity-100 left-0' : 'opacity-0 -left-full'} lg:hidden`}
+        className={`backdrop-blur-xs w-dvw h-full fixed top-0 ease-linear transition-opacity ${isOpen ? 'opacity-100 left-0' : 'opacity-0 -left-[150%]'} lg:hidden`}
         style={{
           transitionProperty: 'opacity, left',
           transitionDuration: '300ms, 0ms',
@@ -43,7 +43,7 @@ export default function Nav() {
         <img src="/icons/Menu.svg" alt="menu" className="size-6" />
       </button>
       <div
-        className={`bg-base-0 border border-base-900 flex flex-col absolute top-0 w-dvw md:w-1/2 lg:flex-row lg:static lg:w-full lg:border-none lg:col-span-7 lg:grid lg:grid-cols-7 ${isOpen ? 'left-0' : '-left-full'} transition-all ease-linear duration-300`}>
+        className={`bg-base-0 border border-base-900 flex flex-col absolute top-0 w-full md:w-1/2 lg:flex-row lg:static lg:w-full lg:border-none lg:col-span-7 lg:grid lg:grid-cols-7 ${isOpen ? 'left-0' : '-left-full'} transition-all ease-linear duration-300`}>
         <div className="border-b border-base-900 lg:hidden">
           <button
             onClick={() => {
@@ -74,7 +74,7 @@ export default function Nav() {
       </div>
       <button
         aria-label="open cart"
-        className="p-3 md:p-4 border-l border-base-900 md:text-xl font-medium lg:py-8 lg:border-l-0 lg:col-start-8">
+        className="p-3 md:p-4 border-l border-base-900 md:text-xl font-medium lg:py-8 lg:border-l-0 lg:col-start-8 bg-base-0">
         <span className="hidden lg:block">Cart</span>
         <img src="/icons/shopping_bag_FILL0_wght300_GRAD0_opsz24.svg" alt="cart" className="size-6 lg:hidden" />
       </button>
