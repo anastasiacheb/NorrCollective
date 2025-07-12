@@ -57,6 +57,16 @@ export default function Page() {
           />
         </div>
       </header>
+      <section className="px-4 py-10 md:p-20 border-x border-b border-base-900 text-center">
+        <h2 className="uppercase text-xs md:text-sm font-medium mb-6">OUR STORY</h2>
+        <h3 className="text-[26px] font-medium mb-4 md:text-[38px]">A Shared Vision for Timeless Design</h3>
+        <p className="leading-snug max-w-159.5 mx-auto">
+          Norr Collective was born from a collective passion for design, form, and history. Since 2010, our team has
+          been curating authentic 20th-century furniture with character — selecting pieces that embody thoughtful
+          craftsmanship and enduring aesthetics. Our goal is to make iconic design accessible to those who value
+          timeless beauty in everyday living.
+        </p>
+      </section>
     </>
   );
 }
