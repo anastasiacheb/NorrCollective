@@ -3,34 +3,6 @@ import Link from 'next/link';
 import { Products } from '@/data';
 import { IconLink } from '@/components';
 
-// type Product = {
-//   name: string;
-//   desctiption: string;
-//   href: string;
-//   category: string;
-//   src: string[];
-//   price: string;
-// };
-
-// const TestProductCard = ({ product }: { product: Product }) => {
-//   return (
-//     <div>
-//       <h2>{product.name}</h2>
-//       <p>{product.desctiption}</p>
-//       <div className="flex">
-//         {product.src.map((img, index) => (
-//           <img
-//             key={index}
-//             src={`/images/${img}`}
-//             alt={`${product.name} ${index + 1}`}
-//             style={{ width: '200px', marginBottom: '1rem' }}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
 interface CategoryItemProps {
   category: string;
   src1: string;
@@ -64,6 +36,21 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
           className="w-full h-auto lg:h-full lg:w-full object-cover group-hover:scale-110 transition-all ease-linear duration-200"
         />
       </Link>
+    </div>
+  );
+}
+
+interface ChooseItemProps {
+  title: string;
+  text: string;
+  last?: boolean;
+}
+
+function ChooseItem({ title, text, last }: ChooseItemProps) {
+  return (
+    <div className={`px-4 py-10 md:p-20 border-l ${!last && 'border-b'}  border-base-900`}>
+      <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">{title}</h4>
+      <p className="leading-snug">{text}</p>
     </div>
   );
 }
@@ -138,38 +125,34 @@ export default function Home() {
           </h2>
         </div>
         <div className="lg:col-span-2">
-          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
-            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Timeless pieces by curators</h4>
-            <p className="leading-snug">
-              At our furniture studio, design experts carefully select authentic and iconic items from the mid-20th
+          <ChooseItem
+            title="Timeless pieces by curators"
+            text="At our furniture studio, design experts carefully select authentic and iconic items from the mid-20th
               century. Each piece is chosen for its elegance, craftsmanship, and ability to transform a space. We follow
               global design trends while honoring classic aesthetics — so your interior feels refined, lived-in, and
-              timeless.
-            </p>
-          </div>
-          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
-            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">On-time delivery</h4>
-            <p className="leading-snug">
-              Never miss a moment with our punctual and careful delivery service. All furniture is brought to you in
+              timeless."
+          />
+          <ChooseItem
+            title="On-time delivery"
+            text="Never miss a moment with our punctual and careful delivery service. All furniture is brought to you in
               perfect condition — no unnecessary packaging, no delays. Your chosen piece arrives ready to take its place
               in your home, exactly as intended.
-            </p>
-          </div>
-          <div className="px-4 py-10 md:p-20 border-l border-b border-base-900">
-            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Safe payment</h4>
-            <p className="leading-snug">
-              We use secure, industry-standard technology to protect your payment and personal data. Ordering is smooth,
+            "
+          />
+          <ChooseItem
+            title="Safe payment"
+            text="We use secure, industry-standard technology to protect your payment and personal data. Ordering is smooth,
               encrypted, and safe — so you can focus on the beauty of great design without any hassle.
-            </p>
-          </div>
-          <div className="px-4 py-10 md:p-20 border-l border-base-900 lg:col-span-2">
-            <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">Support at every step</h4>
-            <p className="leading-snug">
-              From selection to delivery, our team is here to assist you with every detail. Whether you’re furnishing a
+            "
+          />
+          <ChooseItem
+            last
+            title="Support at every step"
+            text="From selection to delivery, our team is here to assist you with every detail. Whether you’re furnishing a
               room or building a collection, we offer personal guidance to help you find pieces that reflect your style
               and fit your space — easily and confidently.
-            </p>
-          </div>
+            "
+          />
         </div>
       </section>
       <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">

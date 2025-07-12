@@ -23,7 +23,7 @@ function NavLink({ name, href, button, className }: NavLinkProps) {
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-dvw z-50 bg-base-0">
+    <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-full z-50 bg-base-0">
       <div
         onClick={() => {
           setIsOpen(false);
@@ -54,7 +54,7 @@ export default function Nav() {
             <img src="/icons/close_button.svg" alt="close" className="size-8" />
           </button>
         </div>
-        <NavLink name="Sign in" button className="lg:col-start-7 lg:border-l" />
+        <NavLink name="Sign in" button className="lg:col-start-7 lg:border-l lg:-m-[0.5px]" />
         <NavLink href="/" name="Home" className="lg:hidden" />
         <NavLink href="/shop" name="Shop" className="lg:col-start-1 lg:row-start-1" />
         <NavLink href="/contact" name="Contact" className="lg:col-start-2 lg:row-start-1" />
