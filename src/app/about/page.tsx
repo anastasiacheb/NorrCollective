@@ -25,6 +25,38 @@ function IconLinkRoundItem({ href, name }: IconLinkProps) {
   );
 }
 
+interface AboutSectionProps {
+  title: string;
+  text: string;
+  src: string;
+  reverse?: boolean;
+}
+
+function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
+  return (
+    <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+      <div
+        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip ${reverse ? 'lg:order-1' : 'order-2'}`}>
+        <Image
+          src={`/images/${src}`}
+          alt="chair"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full h-full aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
+        />
+      </div>
+      <div
+        className={`border-l border-b border-base-900 py-10 px-4 md:p-20 relative ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
+        <div className="lg:sticky lg:top-43">
+          <h2 className="text-[26px] font-medium mb-4 md:text-[38px]">{title}</h2>
+          <p className="leading-snug">{text}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Page() {
   return (
     <>
@@ -53,7 +85,7 @@ export default function Page() {
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
+            className="w-full h-full aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
           />
         </div>
       </header>
@@ -67,6 +99,23 @@ export default function Page() {
           timeless beauty in everyday living.
         </p>
       </section>
+      <AboutSection
+        title="Expertly Curated Design"
+        text="At Norr Collective, we take pride in our team of dedicated curators and design enthusiasts who carefully select each piece. Every item in our collection is chosen for its authenticity, character, and craftsmanship — we work closely with trusted dealers to ensure the highest quality of vintage furniture and timeless design objects from the 20th century."
+        src="DSC_2876-scaled.jpg"
+        reverse
+      />
+      <AboutSection
+        title="Furniture, Decor & Atmosphere"
+        text="Beyond iconic furniture, our collection also includes thoughtful interior pieces — lighting, art objects, and rare finds — designed to shape an atmosphere of calm, beauty, and individuality. We believe that finding meaningful design should be seamless, which is why we offer a smooth and inspiring online experience."
+        src="DSC_2876-scaled.jpg"
+      />
+      <AboutSection
+        title="Making Everyday Living Special"
+        text="Our mission is simple: to bring timeless design into everyday life. We are committed to quality, aesthetics, and a curated approach that helps you create a home filled with intention. Thank you for choosing Norr Collective — we look forward to helping you shape spaces that feel truly yours."
+        src="DSC_2876-scaled.jpg"
+        reverse
+      />
     </>
   );
 }
