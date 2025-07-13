@@ -65,7 +65,7 @@ const Products = [
           'This very rare sofa, designed by Folke Jansson and produced in Sweden, is a distinctive example of Scandinavian mid-century modernism. The piece reflects Jansson’s sculptural approach to furniture design, with a form that balances geometric clarity and visual softness. The combination of materials—red leather and birch—results in a composition that is both visually bold and materially rich.',
         href: '/sofas',
         category: 'sofas',
-        src: ['DSC_8808.jpg', 'DSC_8813.jpg', 'DSC_8817.jpg'],
+        src: ['DSC_8813.jpg', 'DSC_8808.jpg', 'DSC_8817.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -83,7 +83,7 @@ const Products = [
           'The model 1669a/4468 sofa, designed and produced by Fritz Hansen in Denmark in 1941, is a rare example of early Scandinavian mid-century design. It features a gently curved, fully upholstered frame with a tufted backrest, integrated armrests, and a deep seat, combining comfort with an elegant organic form. The sofa is supported by tapered solid beech legs that angle outward, providing both stability and a refined stance.',
         href: '/sofas',
         category: 'sofas',
-        src: ['DSC_1455-scaled.jpg', 'DSC_1459-scaled.jpg', 'DSC_1461-scaled.jpg', 'DSC_1464-scaled.jpg'],
+        src: ['DSC_1459-scaled.jpg', 'DSC_1455-scaled.jpg', 'DSC_1461-scaled.jpg', 'DSC_1464-scaled.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -92,7 +92,7 @@ const Products = [
           'This sofa, model 116, commonly known as the Senator, was designed by Ole Wanscher and produced by France & Son in Denmark in 1951. The frame is built from solid rosewood, notable for its rich, deep tones and pronounced grain patterns that highlight the natural beauty of the wood. The structural design is characterized by gently curved armrests, elegantly sculpted legs, and a subtly angled backrest, which together emphasize both ergonomic comfort and refined craftsmanship.',
         href: '/sofas',
         category: 'sofas',
-        src: ['DSC_8220-scaled.jpg', 'DSC_8228-scaled.jpg', 'DSC_8232-scaled.jpg', 'DSC_8234-scaled.jpg'],
+        src: ['DSC_8228-scaled.jpg', 'DSC_8220-scaled.jpg', 'DSC_8232-scaled.jpg', 'DSC_8234-scaled.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -101,7 +101,7 @@ const Products = [
           'This is a very rare sofa, model “Capri” designed by Johannes Andersen and produced by Trensum in Sweden during the 1960s. The design exemplifies Scandinavian mid-century modernism with a distinct sculptural form and an emphasis on luxurious materials and modernist elegance.',
         href: '/sofas',
         category: 'sofas',
-        src: ['DSC_5213-scaled.jpg', 'DSC_5234-scaled.jpg', 'DSC_5236-scaled.jpg', 'DSC_5238-scaled.jpg'],
+        src: ['DSC_5234-scaled.jpg', 'DSC_5213-scaled.jpg', 'DSC_5236-scaled.jpg', 'DSC_5238-scaled.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -110,7 +110,7 @@ const Products = [
           'Very rare sofa model Croissant designed by Illum Wikkelsø Produced by Holger Christiansen in Denmark Rosewood and light beige leather Excellent vintage condition, with minor signs of usage and patina 1950′s',
         href: '/sofas',
         category: 'sofas',
-        src: ['DSC_0336.jpg', 'DSC_0337.jpg', 'DSC_0341.jpg', 'DSC_0344.jpg', 'DSC_0348.jpg'],
+        src: ['DSC_0341.jpg', 'DSC_0348.jpg', 'DSC_0337.jpg', 'DSC_0344.jpg', 'DSC_0336.jpg'],
         price: 'kjhjkh',
       },
     ],
@@ -172,7 +172,7 @@ const Products = [
           'This rare pair of USA 75 easy chairs, designed by Folke Ohlsson and produced in 1963 by DUX in Sweden, represents a masterful blend of Scandinavian craftsmanship and international modernist aesthetics. The model is a hallmark of Ohlsson’s design philosophy—functionally elegant, material-rich, and subtly expressive—crafted during a time when Swedish furniture design was gaining widespread acclaim on the global stage.',
         href: '/easychairs',
         category: 'easy chairs',
-        src: ['DSC_3585.jpg', 'DSC_3589.jpg', 'DSC_3591.jpg', 'DSC_3593.jpg', 'DSC_3603.jpg'],
+        src: ['DSC_3589.jpg', 'DSC_3585.jpg', 'DSC_3591.jpg', 'DSC_3593.jpg', 'DSC_3603.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -190,7 +190,7 @@ const Products = [
           'The rare Etcetera lounge chair, designed by Jan Ekselius and produced by JOC Möbel AB in Vetlanda, Sweden during the 1960s, is a celebrated icon of Scandinavian modernism that seamlessly merges sculptural form with functional innovation. Known for its distinctive flowing silhouette and ergonomic design, the Etcetera chair embodies the bold experimentation of 1960s design while remaining deeply rooted in the Scandinavian ethos of comfort, craftsmanship, and visual clarity.',
         href: '/easychairs',
         category: 'easy chairs',
-        src: ['DSC_2508.jpg', 'DSC_2509.jpg', 'DSC_2511.jpg', 'DSC_2512.jpg'],
+        src: ['DSC_2511.jpg', 'DSC_2508.jpg', 'DSC_2509.jpg', 'DSC_2512.jpg'],
         price: 'kjhjkh',
       },
       {
@@ -199,7 +199,7 @@ const Products = [
           'This rare pair of easy chairs, designed by Sven Ivar Dysthe and produced by Dokka Møbler in Norway during the 1960s, exemplifies the sophisticated balance between industrial materials and traditional craftsmanship characteristic of Scandinavian modernism. The chairs feature a polished steel frame that provides structural clarity and a sense of architectural precision. Suspended within this frame are black leather seat and backrest panels, which contribute to a lightweight, almost floating appearance while maintaining comfort and support.',
         href: '/easychairs',
         category: 'easy chairs',
-        src: ['DSC_9844.jpg', 'DSC_9852.jpg', 'DSC_9865.jpg'],
+        src: ['DSC_9852.jpg', 'DSC_9844.jpg'],
         price: 'kjhjkh',
       },
       {

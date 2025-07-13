@@ -87,7 +87,6 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:col-span-2">
-          {' '}
           {Products.map((cat, index) => (
             <CategoryItem key={index} index={index} {...cat} />
           ))}

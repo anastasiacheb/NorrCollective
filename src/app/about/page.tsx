@@ -15,7 +15,7 @@ interface IconLinkRoundProps {
   name: string;
 }
 
-function IconLinkRoundItem({ href, name }: IconLinkProps) {
+function IconLinkRoundItem({ href, name }: IconLinkRoundProps) {
   return (
     <Link
       href={href}
