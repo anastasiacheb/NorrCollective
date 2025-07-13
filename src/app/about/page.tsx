@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { PreFooter } from '@/components';
 
 const IconLinks = [
   { href: '#', name: 'Instagram' },
@@ -116,6 +117,7 @@ export default function Page() {
         src="DSC_2876-scaled.jpg"
         reverse
       />
+      <PreFooter />
     </>
   );
 }
