@@ -112,7 +112,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+      <section
+        id="contact"
+        className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)] scroll-mt-12.5 md:scroll-mt-14.5 lg:scroll-mt-23">
         <div className="border-b border-base-900 lg:order-2 grid grid-cols-2">
           <div className="border-b border-l border-base-900 col-span-2 overflow-clip lg:h-[calc(100dvh-92px-79px)] flex items-center justify-center">
             <Image

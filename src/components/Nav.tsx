@@ -66,11 +66,11 @@ export default function Nav({ setIsModalOpen }: ModalProps) {
           }}
           name="Sign in"
           button
-          className="lg:col-start-7 lg:border-l lg:-m-[0.5px]"
+          className="lg:col-start-7 lg:border-l lg:-ml-[0.5px]"
         />
         <NavLink href="/" name="Home" className="lg:hidden" />
         <NavLink href="/shop" name="Shop" className="lg:col-start-1 lg:row-start-1" />
-        <NavLink href="/contact" name="Contact" className="lg:col-start-2 lg:row-start-1" />
+        <NavLink href="/#contact" name="Contact" className="lg:col-start-2 lg:row-start-1" />
         <NavLink href="/about" name="About us" className="lg:hidden" />
         <div className="p-6 border-base-900 border-b flex flex-col gap-4 lg:hidden">
           <Link href="#" className="text-sm font-medium md:text-base w-fit tracking-[2.5%]">
