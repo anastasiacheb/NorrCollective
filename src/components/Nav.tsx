@@ -4,15 +4,17 @@ import { useState } from 'react';
 import { IconLink } from '@/components';
 
 type NavLinkProps =
-  | { name: string; href: string; button?: false; className?: string }
-  | { name: string; button: true; href?: undefined; className?: string };
+  | { name: string; href: string; button?: false; className?: string; onClick?: () => void }
+  | { name: string; button: true; href?: undefined; className?: string; onClick?: () => void };
 
-function NavLink({ name, href, button, className }: NavLinkProps) {
+function NavLink({ name, href, button, className, onClick }: NavLinkProps) {
   const style =
     'text-lg font-medium p-6 border-b border-base-900 w-full md:text-xl text-left lg:border-b-0 lg:border-r lg:text-center lg:py-8';
   const combStyle = `${style} ${className ?? ''}`;
   return button ? (
-    <button className={`${combStyle}`}>{name}</button>
+    <button onClick={onClick} className={`${combStyle}`}>
+      {name}
+    </button>
   ) : (
     <Link href={href} className={`${combStyle}`}>
       {name}
@@ -20,7 +22,11 @@ function NavLink({ name, href, button, className }: NavLinkProps) {
   );
 }
 
-export default function Nav() {
+interface ModalProps {
+  setIsModalOpen: (open: boolean) => void;
+}
+
+export default function Nav({ setIsModalOpen }: ModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-full z-50 bg-base-0">
@@ -54,7 +60,14 @@ export default function Nav() {
             <img src="/icons/close_button.svg" alt="close" className="size-8" />
           </button>
         </div>
-        <NavLink name="Sign in" button className="lg:col-start-7 lg:border-l lg:-m-[0.5px]" />
+        <NavLink
+          onClick={() => {
+            setIsModalOpen(true);
+          }}
+          name="Sign in"
+          button
+          className="lg:col-start-7 lg:border-l lg:-m-[0.5px]"
+        />
         <NavLink href="/" name="Home" className="lg:hidden" />
         <NavLink href="/shop" name="Shop" className="lg:col-start-1 lg:row-start-1" />
         <NavLink href="/contact" name="Contact" className="lg:col-start-2 lg:row-start-1" />
