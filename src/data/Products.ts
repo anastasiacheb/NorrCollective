@@ -9,7 +9,7 @@ const Products = [
         name: 'POUL CADOVIUS SOFA',
         desctiption:
           'This rare three-seater sofa was designed by Danish designer Poul Cadovius and produced by France & Son in Denmark during the 1960s. It exemplifies the refined balance of form and function that characterizes the best of Danish modern furniture. The sofa combines a striking rosewood frame with its original bouclé fabric upholstery, creating an engaging contrast between richly patterned wood and soft, textured fabric.',
-        href: '/sofas',
+        href: '/111',
         category: 'sofas',
         src: ['DSC_8444.jpg', 'DSC_8448.jpg', 'DSC_8440.jpg', 'DSC_8442.jpg'],
         price: 'kjhjkh',

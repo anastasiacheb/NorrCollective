@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+function CreateSlug(string: string) {
+  return string.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
 interface Product {
   name: string;
   price: string;
@@ -19,11 +23,12 @@ interface ProductLinkProps {
   name: string;
   price: string;
   src: string;
+  href: string;
 }
-function ProductLink({ name, price, src }: ProductLinkProps) {
+function ProductLink({ name, price, src, href }: ProductLinkProps) {
   return (
     <Link
-      href="#"
+      href={href}
       className="lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip relative">
       <Image
         src={`/images/${src}`}
@@ -75,7 +80,12 @@ export default async function Page({ params }: { params: Promise<{ category: str
         </div>
         <div className="grid grid-cols-2">
           {cat.products.map((product, index) => (
-            <ProductLink key={index} {...product} src={product.src[0]} />
+            <ProductLink
+              key={index}
+              {...product}
+              src={product.src[0]}
+              href={`/shop${cat.href}/${CreateSlug(product.name)}`}
+            />
           ))}
         </div>
       </header>
