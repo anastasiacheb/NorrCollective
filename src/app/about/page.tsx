@@ -37,14 +37,14 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
   return (
     <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
       <div
-        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip ${reverse ? 'lg:order-1' : 'order-2'}`}>
+        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] ${reverse ? 'lg:order-1' : 'order-2'}`}>
         <Image
           src={`/images/${src}`}
           alt="chair"
           width={0}
           height={0}
           sizes="100vw"
-          className="w-full h-full aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
+          className="w-full h-auto aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto lg:h-[calc(100dvh-92px)]"
         />
       </div>
       <div

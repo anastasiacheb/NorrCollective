@@ -5,4 +5,7 @@ export { default as PreFooter } from './PreFooter';
 export { default as Categories } from './Categories';
 export { default as Modal } from './Modal';
 export { default as Slider } from './Slider';
+export { default as Counter } from './Counter';
+export { default as RadioButton } from './RadioButton';
+export { default as ProductLink } from './ProductLink';
 export { default as NavModalWrap } from './NavModalWrap';
