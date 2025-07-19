@@ -15,7 +15,7 @@ const Products = [
         price: 'kjhjkh',
       },
       {
-        name: 'FOLKE JANSSON SOFA',
+        name: 'FOLKE JANSSONS SOFA',
         description:
           'This is a rare and well-preserved example of the model “Tellus” sofa designed by Folke Jansson and produced by S. M. Wincrantz Möbelindustri in Sweden during the mid-20th century. The sofa demonstrates an elegant execution of Swedish mid-century modernism, combining sculptural form with precise upholstery work and fine detailing.',
         href: '/sofas',

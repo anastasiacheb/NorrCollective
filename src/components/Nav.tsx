@@ -16,7 +16,7 @@ function NavLink({ name, href, button, className, onClick }: NavLinkProps) {
       {name}
     </button>
   ) : (
-    <Link href={href} className={`${combStyle}`}>
+    <Link onClick={onClick} href={href} className={`${combStyle}`}>
       {name}
     </Link>
   );
@@ -24,9 +24,10 @@ function NavLink({ name, href, button, className, onClick }: NavLinkProps) {
 
 interface ModalProps {
   setIsModalOpen: (open: boolean) => void;
+  setIsCartOpen: (open: boolean) => void;
 }
 
-export default function Nav({ setIsModalOpen }: ModalProps) {
+export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-full z-50 bg-base-0">
@@ -63,15 +64,44 @@ export default function Nav({ setIsModalOpen }: ModalProps) {
         <NavLink
           onClick={() => {
             setIsModalOpen(true);
+            setIsOpen(false);
           }}
           name="Sign in"
           button
           className="lg:col-start-7 lg:border-l lg:-ml-[0.5px]"
         />
-        <NavLink href="/" name="Home" className="lg:hidden" />
-        <NavLink href="/shop" name="Shop" className="lg:col-start-1 lg:row-start-1" />
-        <NavLink href="/#contact" name="Contact" className="lg:col-start-2 lg:row-start-1" />
-        <NavLink href="/about" name="About us" className="lg:hidden" />
+        <NavLink
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          href="/"
+          name="Home"
+          className="lg:hidden"
+        />
+        <NavLink
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          href="/shop"
+          name="Shop"
+          className="lg:col-start-1 lg:row-start-1"
+        />
+        <NavLink
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          href="/#contact"
+          name="Contact"
+          className="lg:col-start-2 lg:row-start-1"
+        />
+        <NavLink
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          href="/about"
+          name="About us"
+          className="lg:hidden"
+        />
         <div className="p-6 border-base-900 border-b flex flex-col gap-4 lg:hidden">
           <Link href="#" className="text-sm font-medium md:text-base w-fit tracking-[2.5%]">
             Shipping & returns
@@ -86,6 +116,9 @@ export default function Nav({ setIsModalOpen }: ModalProps) {
         <IconLink center />
       </div>
       <button
+        onClick={() => {
+          setIsCartOpen(true);
+        }}
         aria-label="open cart"
         className="p-3 md:p-4 border-l border-base-900 md:text-xl font-medium lg:py-8 lg:border-l-0 lg:col-start-8 bg-base-0">
         <span className="hidden lg:block">Cart</span>
