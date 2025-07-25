@@ -1,14 +1,17 @@
 'use client';
 import Image from 'next/image';
+import { useContext } from 'react';
+import { CartContext } from '@/components/CartContext';
 
 interface CartItemProps {
   src: string;
   name: string;
   quantity: number;
   price: string;
+  onClick: () => void;
 }
 
-function CartItem({ src, name, quantity, price }: CartItemProps) {
+function CartItem({ src, name, quantity, price, onClick }: CartItemProps) {
   return (
     <div className="px-4 py-6 md:p-10 border-b border-base-900 flex flex-col gap-4 md:flex-row md:items-center">
       <div className="border border-base-900 size-40 flex items-center justify-center overflow-clip flex-none">
@@ -27,7 +30,9 @@ function CartItem({ src, name, quantity, price }: CartItemProps) {
           <p className="text-base">Quantity ({quantity})</p>
           <p className="text-lg font-medium leading-snug">${price}</p>
         </div>
-        <button className="text-base-500 text-sm font-medium md:text-base">Remove</button>
+        <button onClick={onClick} className="text-base-500 text-sm font-medium md:text-base">
+          Remove
+        </button>
       </div>
     </div>
   );
@@ -39,6 +44,14 @@ interface CartProps {
 }
 
 export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
+  const cart = useContext(CartContext);
+  if (!cart) return null;
+  const { cartProducts, setCartProducts } = cart;
+
+  function handleRemove(name: string) {
+    setCartProducts((prev) => prev.filter((item) => item.name !== name));
+  }
+
   return (
     <div className="w-full h-full">
       <div
@@ -64,26 +77,9 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
         </div>
         <div className="overflow-y-auto mb-12 md:mb-14 scrollbar-thumb-base-900 scrollbar-thin scrollbar-w-3">
           <div>
-            <div className="px-4 py-6 md:p-10 border-b border-base-900 flex flex-col gap-4 md:flex-row md:items-center">
-              <div className="border border-base-900 size-40 flex items-center justify-center overflow-clip flex-none">
-                <Image
-                  src={`/images/DSC_2212.jpg`}
-                  alt="chair"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="w-full h-auto object-cover "
-                />
-              </div>
-              <div className="flex justify-between items-end md:items-center w-full">
-                <div className="flex flex-col gap-2">
-                  <p className="text-lg font-medium leading-snug capitalize">sdfsdfdf</p>
-                  <p className="text-base">Quantity (1)</p>
-                  <p className="text-lg font-medium leading-snug">$100</p>
-                </div>
-                <button className="text-base-500 text-sm font-medium md:text-base">Remove</button>
-              </div>
-            </div>
+            {cartProducts.map((cartProd, index) => (
+              <CartItem onClick={() => handleRemove(cartProd.name)} key={index} {...cartProd} />
+            ))}
           </div>
           <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
             <p className="text-lg font-medium leading-snug">Subtotal</p>

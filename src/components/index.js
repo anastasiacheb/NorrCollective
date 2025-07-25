@@ -8,5 +8,7 @@ export { default as Slider } from './Slider';
 export { default as Counter } from './Counter';
 export { default as RadioButton } from './RadioButton';
 export { default as ProductLink } from './ProductLink';
+export { default as ProductPage } from './ProductPage';
 export { default as Cart } from './Cart';
-export { default as NavModalWrap } from './NavModalWrap';
+export { default as StateWrap } from './StateWrap';
+export { default as CartContext } from './CartContext';

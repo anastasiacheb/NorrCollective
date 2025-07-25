@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { Footer, NavModalWrap } from '@/components';
+import { Footer, StateWrap } from '@/components';
 
 const gilroy = localFont({
   src: [
@@ -40,8 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gilroy.variable} antialiased leading-tight`}>
-        <NavModalWrap />
-        {children}
+        <StateWrap>{children}</StateWrap>
         <Footer />
       </body>
     </html>
