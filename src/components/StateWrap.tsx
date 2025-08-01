@@ -10,9 +10,7 @@ interface Props {
 export default function StateWrap({ children }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartProducts, setCartProducts] = useState([
-    { src: 'DSC_2212.jpg', name: 'Sdfsdfdf', quantity: 1, price: '100' },
-  ]);
+  const [cartProducts, setCartProducts] = useState([]);
 
   return (
     <CartContext value={{ cartProducts, setCartProducts }}>

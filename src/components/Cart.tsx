@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useContext } from 'react';
 import { CartContext } from '@/components/CartContext';
 
@@ -7,7 +8,7 @@ interface CartItemProps {
   src: string;
   name: string;
   quantity: number;
-  price: string;
+  price: number;
   onClick: () => void;
 }
 
@@ -76,17 +77,40 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
           </button>
         </div>
         <div className="overflow-y-auto mb-12 md:mb-14 scrollbar-thumb-base-900 scrollbar-thin scrollbar-w-3">
-          <div>
-            {cartProducts.map((cartProd, index) => (
-              <CartItem onClick={() => handleRemove(cartProd.name)} key={index} {...cartProd} />
-            ))}
-          </div>
-          <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
-            <p className="text-lg font-medium leading-snug">Subtotal</p>
-            <p className="text-lg font-medium leading-snug">$100</p>
-          </div>
+          {cartProducts.length > 0 ? (
+            <>
+              {cartProducts.map((cartProd, index) => (
+                <CartItem
+                  onClick={() => handleRemove(cartProd.name)}
+                  key={index}
+                  {...cartProd}
+                  price={Number(cartProd.price)}
+                />
+              ))}
+              <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
+                <p className="text-lg font-medium leading-snug">Subtotal</p>
+                <p className="text-lg font-medium leading-snug">
+                  ${cartProducts.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0)}
+                </p>
+              </div>
+            </>
+          ) : (
+            <div className="h-[calc(100vh-100px)] md:h-[calc(100vh-115px)] lg:h-[calc(100vh-150px)] flex items-center justify-center flex-col gap-2 overflow-hidden">
+              <p className="text-lg font-medium leading-none md:leading-tight text-center ">Your Cart is empty</p>
+              <Link
+                onClick={() => {
+                  setIsCartOpen(false);
+                }}
+                href="/shop"
+                className="text-lg font-medium leading-none md:leading-tight border-b border-base-900">
+                Shop Now
+              </Link>
+            </div>
+          )}
         </div>
-        <button className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full">
+        <button
+          disabled={cartProducts.length === 0}
+          className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full disabled:bg-base-300 disabled:border-base-300 disabled:text-base-500 disabled:cursor-not-allowed">
           Check out
         </button>
       </div>

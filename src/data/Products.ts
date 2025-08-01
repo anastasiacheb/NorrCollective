@@ -12,7 +12,7 @@ const Products = [
         href: '/111',
         category: 'sofas',
         src: ['DSC_8444.jpg', 'DSC_8448.jpg', 'DSC_8440.jpg', 'DSC_8442.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'FOLKE JANSSONS SOFA',
@@ -21,7 +21,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_7076.jpg', 'DSC_7080.jpg', 'DSC_7082.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'KHO LIANG IE SOFA',
@@ -30,7 +30,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_6205.jpg', 'DSC_6208.jpg', 'DSC_6198.jpg', 'DSC_6203.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'ILLUM WIKKELSØ SOFA',
@@ -39,7 +39,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_4233.jpg', 'DSC_4246.jpg', 'DSC_4249.jpg', 'DSC_4251.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HANS HARTL DAYBED',
@@ -48,7 +48,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_3130.jpg', 'DSC_3134.jpg', 'DSC_3136.jpg', 'DSC_3141.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'TOVE & EDVARD KINDT-LARSEN SOFA',
@@ -57,7 +57,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_0806.jpg', 'DSC_0808.jpg', 'DSC_0813.jpg', 'DSC_0814.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'FOLKE JANSSON SOFA',
@@ -66,7 +66,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_8813.jpg', 'DSC_8808.jpg', 'DSC_8817.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'BRUNO MATHSSON DAYBED',
@@ -75,7 +75,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_6612.jpg', 'DSC_6615-2.jpg', 'DSC_6615.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'FRITZ HANSEN SOFA',
@@ -84,7 +84,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_1459-scaled.jpg', 'DSC_1455-scaled.jpg', 'DSC_1461-scaled.jpg', 'DSC_1464-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'OLE WANSCHER SOFA',
@@ -93,7 +93,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_8228-scaled.jpg', 'DSC_8220-scaled.jpg', 'DSC_8232-scaled.jpg', 'DSC_8234-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JOHANNES ANDERSEN SOFA',
@@ -102,7 +102,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_5234-scaled.jpg', 'DSC_5213-scaled.jpg', 'DSC_5236-scaled.jpg', 'DSC_5238-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'ILLUM WIKKELSØ SOFA',
@@ -111,7 +111,7 @@ const Products = [
         href: '/sofas',
         category: 'sofas',
         src: ['DSC_0341.jpg', 'DSC_0348.jpg', 'DSC_0337.jpg', 'DSC_0344.jpg', 'DSC_0336.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
@@ -128,7 +128,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_5998.jpg', 'DSC_6000.jpg', 'DSC_6008.jpg', 'DSC_6015.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'IB MADSEN & ACTON SCHUBELL EASY CHAIRS',
@@ -137,7 +137,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_5188.jpg', 'DSC_5190.jpg', 'DSC_5192.jpg', 'DSC_5193.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HANS EICHENBERGER EASY CHAIRS',
@@ -146,7 +146,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_5102.jpg', 'DSC_5110.jpg', 'DSC_5111.jpg', 'DSC_5115.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'OTTO SCHULZ EASY CHAIRS',
@@ -155,7 +155,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_4187.jpg', 'DSC_4195.jpg', 'DSC_4200.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JIO MÖBLER LOUNGE CHAIR',
@@ -164,7 +164,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_5566-scaled.jpg', 'DSC_5570-scaled.jpg', 'DSC_5582-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'FOLKE OHLSSON EASY CHAIRS',
@@ -173,7 +173,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_3589.jpg', 'DSC_3585.jpg', 'DSC_3591.jpg', 'DSC_3593.jpg', 'DSC_3603.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'IB KOFOD-LARSEN EASY CHAIR',
@@ -182,7 +182,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_9405.jpg', 'DSC_9408.jpg', 'DSC_9409.jpg', 'DSC_9416.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JAN EKSELIUS LOUNGE CHAIR',
@@ -191,7 +191,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_2511.jpg', 'DSC_2508.jpg', 'DSC_2509.jpg', 'DSC_2512.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'SVEN IVAR DYSTHE EASY CHAIRS',
@@ -200,7 +200,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_9852.jpg', 'DSC_9844.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'AKSEL BENDER MADSEN & EJNER LARSEN EASY CHAIRS',
@@ -209,7 +209,7 @@ const Products = [
         href: '/easychairs',
         category: 'easy chairs',
         src: ['DSC_4143-scaled.jpg', 'DSC_4145-scaled.jpg', 'DSC_4147-scaled.jpg', 'DSC_4158-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
@@ -226,7 +226,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_8687.jpg', 'DSC_8690.jpg', 'DSC_8693.jpg', 'DSC_8697.jpg', 'DSC_8707.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'AXEL EINAR HJORTH DINING CHAIRS',
@@ -235,7 +235,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_4054.jpg', 'DSC_4057.jpg', 'DSC_4068.jpg', 'DSC_4079.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JENS RISOM ARMCHAIRS',
@@ -244,7 +244,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_3113.jpg', 'DSC_3115-2.jpg', 'DSC_3116.jpg', 'DSC_3118.jpg', 'DSC_3120.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HANS WEGNER ARMCHAIRS',
@@ -253,7 +253,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_1962.jpg', 'DSC_1968.jpg', 'DSC_1973.jpg', 'DSC_1978.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JØRGEN LUND & OLE LARSEN OFFICE CHAIR',
@@ -262,7 +262,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_0222.jpg', 'DSC_0232.jpg', 'DSC_0238.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HORST BRÜNING ARMCHAIRS',
@@ -271,7 +271,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_3168-scaled.jpg', 'DSC_3173-scaled.jpg', 'DSC_3178-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HANS OLSEN ARMCHAIRS',
@@ -280,7 +280,7 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: ['DSC_3635-scaled.jpg', 'DSC_3643-scaled.jpg', 'DSC_3649-scaled.jpg', 'DSC_3652-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'FINN JUHL ARMCHAIRS',
@@ -295,7 +295,7 @@ const Products = [
           'DSC_2878-scaled.jpg',
           'DSC_2887-scaled.jpg',
         ],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
@@ -312,7 +312,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_8610.jpg', 'DSC_8613.jpg', 'DSC_8615.jpg', 'DSC_8617.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'AXEL EINAR HJORTH CABINET',
@@ -321,7 +321,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_7405.jpg', 'DSC_7408.jpg', 'DSC_7417.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JOHAN HAGEN BOOKCASES',
@@ -330,7 +330,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_5316.jpg', 'DSC_5318.jpg', 'DSC_5321.jpg', 'DSC_5329.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'OTTO SCHULZ CABINET',
@@ -339,7 +339,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_1970.jpg', 'DSC_1980.jpg', 'DSC_1982.jpg', 'DSC_1988.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'CABINET',
@@ -348,7 +348,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_1409.jpg', 'DSC_1416.jpg', 'DSC_1417.jpg', 'DSC_1419.jpg', 'DSC_1424.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'KAI KRISTIANSEN BUREAU',
@@ -357,7 +357,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_6994.jpg', 'DSC_6996.jpg', 'DSC_6997.jpg', 'DSC_7000.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'ESTRID ERICSON & JOSEF FRANK CHEST',
@@ -366,7 +366,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_3322.jpg', 'DSC_3324.jpg', 'DSC_3326.jpg', 'DSC_3329.jpg', 'DSC_3331.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'OVE FEUK BUREAU',
@@ -375,7 +375,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_3305.jpg', 'DSC_3307.jpg', 'DSC_3308.jpg', 'DSC_3311.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'SWEDISH GRACE CABINET',
@@ -384,7 +384,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_2589.jpg', 'DSC_2592.jpg', 'DSC_2594.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'KURT ØSTERVIG BAR CABINET',
@@ -393,7 +393,7 @@ const Products = [
         href: '/storage',
         category: 'storage',
         src: ['DSC_3252-scaled.jpg', 'DSC_3254-scaled.jpg', 'DSC_3257-scaled.jpg', 'DSC_3261-scaled.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
@@ -410,7 +410,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_9118.jpg', 'DSC_9123.jpg', 'DSC_9125.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'AXEL EINAR HJORTH DINING TABLE',
@@ -419,7 +419,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_5602.jpg', 'DSC_5606.jpg', 'DSC_5608.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'CARL MALMSTEN DESK',
@@ -428,7 +428,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_3351.jpg', 'DSC_3354.jpg', 'DSC_3356.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'SVEN ENGSTRÖM & GUNNAR MYRSTRAND BEDSIDE TABLES',
@@ -437,7 +437,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_2319.jpg', 'DSC_2324.jpg', 'DSC_2325.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JACOB KJÆR ATTRIB. DESK',
@@ -446,7 +446,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_9448.jpg', 'DSC_9449.jpg', 'DSC_9450.jpg', 'DSC_9454.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'POUL HUNDEVAD COFFEE TABLE',
@@ -455,7 +455,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_9647.jpg', 'DSC_9649.jpg', 'DSC_9653.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'JOSEF FRANK COFFEE TABLE',
@@ -464,7 +464,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_9323.jpg', 'DSC_9326.jpg', 'DSC_9333.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'SVANTE SKOGH DINING TABLE',
@@ -473,7 +473,7 @@ const Products = [
         href: '/tables',
         category: 'tables',
         src: ['DSC_6371.jpg', 'DSC_6372.jpg', 'DSC_6374.jpg', 'DSC_6377.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
@@ -490,7 +490,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_7492.jpg', 'DSC_7499.jpg', 'DSC_7500.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'CARL-AXEL ACKING WALL LAMPS',
@@ -499,7 +499,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_4978.jpg', 'DSC_4979.jpg', 'DSC_4984.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'ROLF GRAAE WALL LAMPS',
@@ -508,7 +508,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_4906.jpg', 'DSC_4907.jpg', 'DSC_4923.jpg', 'DSC_4925.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'TORSTEN THORUP & CLAUS BONDERUP WALL LAMPS',
@@ -517,7 +517,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_4891.jpg', 'DSC_4895.jpg', 'DSC_4896.jpg', 'DSC_4901.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'ERIK TIDSTRAND TABLE LAMP',
@@ -526,7 +526,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_4091.jpg', 'DSC_4093.jpg', 'DSC_4094.jpg', 'DSC_4100.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
       {
         name: 'HANS-AGNE JAKOBSSON WALL LAMPS',
@@ -535,7 +535,7 @@ const Products = [
         href: '/light',
         category: 'light',
         src: ['DSC_2211.jpg', 'DSC_2212.jpg', 'DSC_2215.jpg'],
-        price: 'kjhjkh',
+        price: '100',
       },
     ],
   },
