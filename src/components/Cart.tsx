@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { CartContext } from '@/components/CartContext';
+import { Button } from '@/components';
 
 interface CartItemProps {
   src: string;

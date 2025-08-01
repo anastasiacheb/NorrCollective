@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IconLink } from '@/components';
+import { IconLink, Button } from '@/components';
 import { Products } from '@/data';
 
 export default function Footer() {
@@ -13,17 +13,14 @@ export default function Footer() {
         </p>
         <form action="#" className="flex flex-col gap-4">
           <input
+            required
             type="email"
             name="email"
             id="email"
             placeholder="Your Email"
             className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
           />
-          <button
-            type="submit"
-            className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center">
-            Remind
-          </button>
+          <Button text="Remind" />
         </form>
       </div>
       <div className="py-10 px-4 md:p-10 border-r border-b border-base-900 flex flex-col gap-4 md:gap-6">

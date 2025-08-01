@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { Button } from '@/components';
 
 interface ModalProps {
   isModalOpen: boolean;
@@ -39,17 +40,14 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
           <p className="text-base font-medium mb-3">Use your mobile number to sign up or log in</p>
           <form action="#" className="flex flex-col gap-4 mb-6">
             <input
+              required
               type="tel"
               name="phone"
               id="phone"
               placeholder="+46 8 XXX XX XXX"
               className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
             />
-            <button
-              type="submit"
-              className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center">
-              continue
-            </button>
+            <Button text="continue" />
           </form>
           <div className="relative mb-6">
             <span
@@ -65,8 +63,15 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
               <img src="/icons/Google.svg" alt="google icon" className="size-6" />
               continue with google
             </button>
-            <button className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center gap-1">
-              <img src="/icons/Apple.svg" alt="apple icon" className="size-6" />
+            <button className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center gap-1 group">
+              <div className="relative">
+                <img src="/icons/Apple.svg" alt="apple icon" className="size-6" />
+                <img
+                  src="/icons/Apple2.svg"
+                  alt="apple icon"
+                  className="size-6 absolute top-0 opacity-0 group-hover:opacity-100 transition-all ease-linear"
+                />
+              </div>
               continue with apple
             </button>
           </div>

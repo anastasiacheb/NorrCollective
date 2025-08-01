@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IconLink, PreFooter, Categories } from '@/components';
+import { IconLink, PreFooter, Categories, Button } from '@/components';
 
 interface ChooseItemProps {
   title: string;
@@ -139,17 +139,14 @@ export default function Home() {
             <p className="text-lg leading-snug font-medium mb-4">We will call you back</p>
             <form action="#" className="flex flex-col gap-4 md:grid md:grid-cols-2">
               <input
+                required
                 type="tel"
                 name="phone"
                 id="phone"
                 placeholder="+46 8 XXX XX XXX"
                 className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
               />
-              <button
-                type="submit"
-                className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center">
-                book a call
-              </button>
+              <Button text="book a call" />
             </form>
           </div>
           <div className="border-base-900 md:border-r md:-mr-[0.5px]">

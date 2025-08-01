@@ -1,6 +1,7 @@
 'use client';
 import { useContext, useState, useRef } from 'react';
 import { CartContext } from '@/components/CartContext';
+import { Button } from '@/components';
 import Image from 'next/image';
 
 interface CheckoutItemProps {
@@ -36,7 +37,7 @@ function CheckoutItem({ src, name, quantity, price }: CheckoutItemProps) {
 
 export default function Page() {
   const [infoIsOpen, setInfoIsOpen] = useState(true);
-  const info = useRef(null);
+  const info = useRef<HTMLDivElement>(null);
 
   const cart = useContext(CartContext);
   if (!cart) return null;
@@ -52,12 +53,12 @@ export default function Page() {
               alt="cart icon"
               className="size-6 lg:hidden"
             />
-            <p className="text-lg font-medium leading-snug lg:uppercase lg:text-sm lg:leading-tight">
+            <p className="text-lg font-medium leading-snug lg:uppercase lg:text-sm lg:leading-tight lg:cursor-auto">
               <span className="lg:hidden">Show </span> order summary
             </p>
             <img src="/icons/Cheveron25.svg" alt="cart icon" className="size-6 lg:hidden" />
           </button>
-          <p className="text-lg font-medium leading-snug md:text-xl">
+          <p className={`${infoIsOpen && 'hidden'} text-lg font-medium leading-snug md:text-xl lg:hidden`}>
             ${cartProducts.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0)}
           </p>
         </div>
@@ -80,17 +81,14 @@ export default function Page() {
                 <p className="text-base pb-4">If you have our gift card, enter the code to get discounts</p>
                 <form action="#" className="flex flex-col gap-4 md:grid md:grid-cols-2">
                   <input
+                    required
                     type="tel"
                     name="giftcard"
                     id="giftcard"
                     placeholder="Gift card"
                     className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center bg-base-0"
                   />
-                  <button
-                    type="submit"
-                    className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center">
-                    Apply
-                  </button>
+                  <Button text="Apply" />
                 </form>
               </div>
               <div className="py-6 border-b border-base-300">
@@ -119,7 +117,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="lg:order-1 border-b border-r border-base-900 py-10 px-4 md:px-20"></div>
+      <div className="lg:order-1 border-b border-l border-base-900 py-10 px-4 md:px-20"></div>
     </section>
   );
 }
