@@ -10,7 +10,7 @@ export default function PreFooter() {
       </p>
       <Link
         href="/shop"
-        className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center max-w-67 mx-auto">
+        className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center max-w-67 mx-auto hover:border-base-700">
         shop now
       </Link>
     </section>

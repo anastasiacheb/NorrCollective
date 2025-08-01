@@ -81,7 +81,7 @@ export default function Page() {
         </div>
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip">
           <Image
-            src="/images/DSC_2876-scaled.jpg"
+            src="/images/DSC_4376-1.jpg"
             alt="chair"
             width={0}
             height={0}
@@ -103,18 +103,18 @@ export default function Page() {
       <AboutSection
         title="Expertly Curated Design"
         text="At Norr Collective, we take pride in our team of dedicated curators and design enthusiasts who carefully select each piece. Every item in our collection is chosen for its authenticity, character, and craftsmanship — we work closely with trusted dealers to ensure the highest quality of vintage furniture and timeless design objects from the 20th century."
-        src="DSC_2876-scaled.jpg"
+        src="request-trade-img-optimized.png"
         reverse
       />
       <AboutSection
         title="Furniture, Decor & Atmosphere"
         text="Beyond iconic furniture, our collection also includes thoughtful interior pieces — lighting, art objects, and rare finds — designed to shape an atmosphere of calm, beauty, and individuality. We believe that finding meaningful design should be seamless, which is why we offer a smooth and inspiring online experience."
-        src="DSC_2876-scaled.jpg"
+        src="DSC_1191.jpg"
       />
       <AboutSection
         title="Making Everyday Living Special"
         text="Our mission is simple: to bring timeless design into everyday life. We are committed to quality, aesthetics, and a curated approach that helps you create a home filled with intention. Thank you for choosing Norr Collective — we look forward to helping you shape spaces that feel truly yours."
-        src="DSC_2876-scaled.jpg"
+        src="trade-program.webp"
         reverse
       />
       <PreFooter />

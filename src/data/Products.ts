@@ -2,8 +2,8 @@ const Products = [
   {
     category: 'sofas',
     href: '/sofas',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_1455-scaled.jpg',
+    src2: 'DSC_1455-scaled.jpg',
     products: [
       {
         name: 'POUL CADOVIUS SOFA',
@@ -118,8 +118,8 @@ const Products = [
   {
     category: 'easy chairs',
     href: '/easychairs',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_3585.jpg',
+    src2: 'DSC_3593.jpg',
     products: [
       {
         name: 'PAUL LEIDERSDORFF EASY CHAIRS',
@@ -216,8 +216,8 @@ const Products = [
   {
     category: 'chairs',
     href: '/chairs',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_3116.jpg',
+    src2: 'DSC_1968.jpg',
     products: [
       {
         name: 'IB KOFOD-LARSEN ARMCHAIR',
@@ -234,7 +234,7 @@ const Products = [
           'This rare and exquisite set of Borgholm chairs—comprising two armchairs and four side chairs—was designed by Axel Einar Hjorth and produced by Bodafors in Sweden during the 1930s. The set is a definitive example of Swedish Grace, a style that emerged between classicism and modernism, characterized by its balance of architectural clarity, ornamentation, and superior craftsmanship.',
         href: '/chairs',
         category: 'chairs',
-        src: ['DSC_4054.jpg', 'DSC_4057.jpg', 'DSC_4068.jpg', 'DSC_4079.jpg'],
+        src: ['DSC_4057.jpg', 'DSC_4054.jpg', 'DSC_4068.jpg', 'DSC_4079.jpg'],
         price: '100',
       },
       {
@@ -243,7 +243,7 @@ const Products = [
           'This rare set of six armchairs, model Playboy / C140, was designed by Jens Risom in 1960 and produced by Risom Design in Denmark. Each chair exemplifies Risom’s capacity to balance sculptural elegance with functional rigor, resulting in a design that is both refined and enduring.',
         href: '/chairs',
         category: 'chairs',
-        src: ['DSC_3113.jpg', 'DSC_3115-2.jpg', 'DSC_3116.jpg', 'DSC_3118.jpg', 'DSC_3120.jpg'],
+        src: ['DSC_3120.jpg', 'DSC_3113.jpg', 'DSC_3115-2.jpg', 'DSC_3116.jpg', 'DSC_3118.jpg'],
         price: '100',
       },
       {
@@ -252,7 +252,7 @@ const Products = [
           'This rare set of twelve armchairs, model JH-507, was designed by Hans J. Wegner and produced by the esteemed Danish cabinetmaker Johannes Hansen in the 1950s. The chairs epitomize the refined craftsmanship and sculptural elegance that define Wegner’s contributions to mid-century Scandinavian design.',
         href: '/chairs',
         category: 'chairs',
-        src: ['DSC_1962.jpg', 'DSC_1968.jpg', 'DSC_1973.jpg', 'DSC_1978.jpg'],
+        src: ['DSC_1973.jpg', 'DSC_1962.jpg', 'DSC_1968.jpg', 'DSC_1978.jpg'],
         price: '100',
       },
       {
@@ -270,7 +270,7 @@ const Products = [
           'This rare set of four armchairs was designed by Horst Brüning and produced by Alfred Kill International in Germany in 1968. The chairs showcase a sophisticated blend of materials, featuring tubular stainless steel frames paired with seats upholstered in high-quality black leather. The leather has aged gracefully, developing a patina with natural wear that enhances the vintage character of the pieces.',
         href: '/chairs',
         category: 'chairs',
-        src: ['DSC_3168-scaled.jpg', 'DSC_3173-scaled.jpg', 'DSC_3178-scaled.jpg'],
+        src: ['DSC_3178-scaled.jpg', 'DSC_3168-scaled.jpg', 'DSC_3173-scaled.jpg'],
         price: '100',
       },
       {
@@ -279,7 +279,7 @@ const Products = [
           'This rare set of armchairs, model 30, was designed by Hans Olsen and produced by CS Møbler in Denmark during the 1960s. Crafted from solid rosewood, the chairs showcase a deep, rich grain that highlights the sculptural elegance of the design. The gently curved backrest flows seamlessly into the armrests, creating a continuous, organic form that balances aesthetics with comfort.',
         href: '/chairs',
         category: 'chairs',
-        src: ['DSC_3635-scaled.jpg', 'DSC_3643-scaled.jpg', 'DSC_3649-scaled.jpg', 'DSC_3652-scaled.jpg'],
+        src: ['DSC_3652-scaled.jpg', 'DSC_3635-scaled.jpg', 'DSC_3643-scaled.jpg', 'DSC_3649-scaled.jpg'],
         price: '100',
       },
       {
@@ -289,8 +289,8 @@ const Products = [
         href: '/chairs',
         category: 'chairs',
         src: [
-          'DSC_2872-scaled.jpg',
           'DSC_2876-scaled.jpg',
+          'DSC_2872-scaled.jpg',
           'DSC_2877-scaled.jpg',
           'DSC_2878-scaled.jpg',
           'DSC_2887-scaled.jpg',
@@ -302,8 +302,8 @@ const Products = [
   {
     category: 'storage',
     href: '/storage',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_3257-scaled.jpg',
+    src2: 'DSC_5318.jpg',
     products: [
       {
         name: 'HENRY ROSENGREN HANSEN SIDEBOARD',
@@ -311,7 +311,7 @@ const Products = [
           'This rare sideboard is designed by Henry Rosengren Hansen and produced by Brande Møbelindustri during the 1950s. Crafted in richly grained rosewood, the sideboard displays the refined minimalism and functional elegance characteristic of Danish modern design.',
         href: '/storage',
         category: 'storage',
-        src: ['DSC_8610.jpg', 'DSC_8613.jpg', 'DSC_8615.jpg', 'DSC_8617.jpg'],
+        src: ['DSC_8613.jpg', 'DSC_8610.jpg', 'DSC_8615.jpg', 'DSC_8617.jpg'],
         price: '100',
       },
       {
@@ -320,7 +320,7 @@ const Products = [
           'This cabinet, known as the “Metropolitan” model, was designed by Axel Einar Hjorth and produced by Albin Johansson in Sweden during the 1920s. It is a rare example of Swedish Grace, a style that emerged in the interwar period combining classical restraint with modern elegance. This particular version corresponds to the model exhibited at the Metropolitan Museum of Art in New York during the 1927 exhibition “Swedish Contemporary Decorative Arts” an event that marked the international recognition of Swedish design.',
         href: '/storage',
         category: 'storage',
-        src: ['DSC_7405.jpg', 'DSC_7408.jpg', 'DSC_7417.jpg'],
+        src: ['DSC_7417.jpg', 'DSC_7405.jpg', 'DSC_7408.jpg'],
         price: '100',
       },
       {
@@ -374,7 +374,7 @@ const Products = [
           'This rare freestanding bureau, designed by Ove Feuk and produced by Nordiska Kompaniet in Sweden during the 1960s, is a refined example of Scandinavian modernism that balances material luxury with functional clarity. The bureau’s structure is composed of a solid wooden carcass, fully upholstered in black leather. The leather presents a subtly textured surface with natural tonal variation and a rich patina that has developed over time, underscoring the age, authenticity, and enduring quality of the piece.',
         href: '/storage',
         category: 'storage',
-        src: ['DSC_3305.jpg', 'DSC_3307.jpg', 'DSC_3308.jpg', 'DSC_3311.jpg'],
+        src: ['DSC_3307.jpg', 'DSC_3305.jpg', 'DSC_3308.jpg', 'DSC_3311.jpg'],
         price: '100',
       },
       {
@@ -383,7 +383,7 @@ const Products = [
           'This rare Swedish Grace cabinet, produced in Sweden during the 1920s, is a distinguished example of one of Scandinavia’s most refined stylistic periods—a graceful synthesis of neoclassicism, Art Deco, and functionalist restraint. While the designer remains unknown, the craftsmanship and ornamental language clearly align with the principles of Swedish Grace, a movement that gained international acclaim for its harmonious balance of elegance and utility.',
         href: '/storage',
         category: 'storage',
-        src: ['DSC_2589.jpg', 'DSC_2592.jpg', 'DSC_2594.jpg'],
+        src: ['DSC_2594.jpg', 'DSC_2589.jpg', 'DSC_2592.jpg'],
         price: '100',
       },
       {
@@ -400,8 +400,8 @@ const Products = [
   {
     category: 'tables',
     href: '/tables',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_6372.jpg',
+    src2: 'DSC_9649.jpg',
     products: [
       {
         name: 'SEVERIN HANSEN SIDE TABLE',
@@ -427,7 +427,7 @@ const Products = [
           'This rare desk, designed by Carl Malmsten and produced by Nordiska Kompaniet in Sweden during the 1930s, is a refined example of Swedish Art Deco craftsmanship and design. Created during a period when Malmsten was transitioning from the ornamental influences of National Romanticism to a more modernist but still classically grounded idiom, the desk embodies a subtle balance of decorative detailing and structural clarity.',
         href: '/tables',
         category: 'tables',
-        src: ['DSC_3351.jpg', 'DSC_3354.jpg', 'DSC_3356.jpg'],
+        src: ['DSC_3356.jpg', 'DSC_3351.jpg', 'DSC_3354.jpg'],
         price: '100',
       },
       {
@@ -445,7 +445,7 @@ const Products = [
           'This rare freestanding desk, attributed to Jacob Kjær and produced in Denmark, is an exemplary piece of mid-20th-century Danish design that combines refined materials with a restrained, architectural aesthetic. It reflects the principles central to Kjær’s work—clarity of form, high-quality craftsmanship, and an emphasis on both beauty and function.',
         href: '/tables',
         category: 'tables',
-        src: ['DSC_9448.jpg', 'DSC_9449.jpg', 'DSC_9450.jpg', 'DSC_9454.jpg'],
+        src: ['DSC_9454.jpg', 'DSC_9448.jpg', 'DSC_9449.jpg', 'DSC_9450.jpg'],
         price: '100',
       },
       {
@@ -480,8 +480,8 @@ const Products = [
   {
     category: 'light',
     href: '/light',
-    src1: 'DSC_8444.jpg',
-    src2: 'DSC_8444.jpg',
+    src1: 'DSC_4896.jpg',
+    src2: 'DSC_4923.jpg',
     products: [
       {
         name: 'CEILING LAMP',
@@ -525,7 +525,7 @@ const Products = [
           'This rare table lamp, designed by Erik Tidstrand and produced in the 1930s by Nordiska Kompaniet in Sweden, is a distinguished example of early Scandinavian modern design. Embodying a harmonious synthesis of function, material richness, and refined detailing, the lamp reflects both the transitional aesthetic of the interwar period and the enduring values of Swedish craftsmanship.',
         href: '/light',
         category: 'light',
-        src: ['DSC_4091.jpg', 'DSC_4093.jpg', 'DSC_4094.jpg', 'DSC_4100.jpg'],
+        src: ['DSC_4094.jpg', 'DSC_4091.jpg', 'DSC_4093.jpg', 'DSC_4100.jpg'],
         price: '100',
       },
       {
@@ -534,7 +534,7 @@ const Products = [
           'The rare wall lamps, model V-180, designed by Hans-Agne Jakobsson and produced by Hans-Agne Jakobsson AB in Markaryd, Sweden, exemplify the designer’s talent for crafting lighting fixtures that merge sculptural form with atmospheric function. These pieces are a compelling representation of Scandinavian mid-century design, distinguished by their material richness, balanced proportions, and emphasis on indirect illumination.',
         href: '/light',
         category: 'light',
-        src: ['DSC_2211.jpg', 'DSC_2212.jpg', 'DSC_2215.jpg'],
+        src: ['DSC_2212.jpg', 'DSC_2211.jpg', 'DSC_2215.jpg'],
         price: '100',
       },
     ],

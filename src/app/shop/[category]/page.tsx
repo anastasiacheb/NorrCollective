@@ -15,7 +15,7 @@ interface Product {
 interface Category {
   category: string;
   href: string;
-  src1: string;
+  src2: string;
   products: Product[];
 }
 
@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
       <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2">
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:h-[calc(100dvh-92px)] self-start">
           <Image
-            src={`/images/${cat.src1}`}
+            src={`/images/${cat.src2}`}
             alt="chair"
             width={0}
             height={0}

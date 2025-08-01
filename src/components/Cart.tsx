@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { CartContext } from '@/components/CartContext';
-import { Button } from '@/components';
 
 interface CartItemProps {
   src: string;
@@ -28,7 +27,7 @@ function CartItem({ src, name, quantity, price, onClick }: CartItemProps) {
       </div>
       <div className="flex justify-between items-end md:items-center w-full">
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-medium leading-snug capitalize">{name}</p>
+          <p className="text-lg font-medium leading-snug capitalize">{name.toLowerCase()}</p>
           <p className="text-base">Quantity ({quantity})</p>
           <p className="text-lg font-medium leading-snug">${price}</p>
         </div>
@@ -77,7 +76,7 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
             <img src="/icons/close_button.svg" alt="close" className="size-6" />
           </button>
         </div>
-        <div className="overflow-y-auto mb-12 md:mb-14 scrollbar-thumb-base-900 scrollbar-thin scrollbar-w-3">
+        <div className="overflow-y-auto mb-12 md:mb-14">
           {cartProducts.length > 0 ? (
             <>
               {cartProducts.map((cartProd, index) => (
@@ -111,8 +110,14 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
         </div>
         <Link
           href="/checkout"
-          // disabled={cartProducts.length === 0}
-          className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full disabled:bg-base-300 disabled:border-base-300 disabled:text-base-500 disabled:cursor-not-allowed">
+          onClick={(e) => {
+            if (cartProducts.length === 0) {
+              e.preventDefault();
+            } else {
+              setIsCartOpen(false);
+            }
+          }}
+          className={` transition-all ease-linear uppercase text-sm leading-none font-medium border  md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full  ${cartProducts.length === 0 ? 'bg-base-300 border-base-300 text-base-500 cursor-not-allowed' : 'bg-base-900 text-base-0 hover:bg-base-700 hover:border-base-700 border-base-900'}`}>
           Check out
         </Link>
       </div>

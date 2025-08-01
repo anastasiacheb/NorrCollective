@@ -26,7 +26,7 @@ function CheckoutItem({ src, name, quantity, price }: CheckoutItemProps) {
       </div>
       <div className="flex justify-between items-center w-full">
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-medium leading-snug capitalize">{name}</p>
+          <p className="text-lg font-medium leading-snug capitalize">{name.toLowerCase()}</p>
           <p className="text-base">Quantity ({quantity})</p>
         </div>
         <p className="text-lg font-medium leading-snug">${price}</p>

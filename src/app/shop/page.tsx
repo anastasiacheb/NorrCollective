@@ -7,7 +7,7 @@ export default function Page() {
       <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-4">
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:col-span-2 lg:h-[calc(100dvh-92px)]">
           <Image
-            src="/images/DSC_2876-scaled.jpg"
+            src="/images/DSC_1191.jpg"
             alt="chair"
             width={0}
             height={0}
