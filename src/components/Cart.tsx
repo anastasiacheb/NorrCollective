@@ -89,7 +89,7 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
               ))}
               <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
                 <p className="text-lg font-medium leading-snug">Subtotal</p>
-                <p className="text-lg font-medium leading-snug">
+                <p className="text-lg font-medium leading-snug md:text-xl">
                   ${cartProducts.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0)}
                 </p>
               </div>
@@ -108,11 +108,12 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
             </div>
           )}
         </div>
-        <button
-          disabled={cartProducts.length === 0}
+        <Link
+          href="/checkout"
+          // disabled={cartProducts.length === 0}
           className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full disabled:bg-base-300 disabled:border-base-300 disabled:text-base-500 disabled:cursor-not-allowed">
           Check out
-        </button>
+        </Link>
       </div>
     </div>
   );
