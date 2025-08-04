@@ -26,7 +26,7 @@ export default function Counter({ quantity, setQuantity }: CounterProps) {
       <button
         onClick={decreaseCounterValue}
         aria-label="decrease quantity"
-        className="border-l border-b flex justify-center items-center size-11 flex-none">
+        className="border-l border-b border-base-900 flex justify-center items-center size-11 flex-none">
         <img src="/icons/Vector1.svg" alt="minus" className="w-5 h-0.5" />
       </button>
       <p className="border-l border-b border-base-900 w-full md:w-16 flex justify-center items-center text-base">
@@ -35,7 +35,7 @@ export default function Counter({ quantity, setQuantity }: CounterProps) {
       <button
         onClick={increaseCounterValue}
         aria-label="increase quantity"
-        className="border-l border-b flex justify-center items-center size-11 flex-none">
+        className="border-l border-b border-base-900 flex justify-center items-center size-11 flex-none">
         <img src="/icons/Vector.svg" alt="minus" className="size-5" />
       </button>
     </div>

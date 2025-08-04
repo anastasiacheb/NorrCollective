@@ -123,10 +123,10 @@ export default function Home() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-full object-cover aspect-[375/420] md:aspect-[768/500] lg:aspect-auto lg:h-auto"
+              className="w-full h-full object-cover aspect-[375/420] md:aspect-[768/500] lg:aspect-auto"
             />
           </div>
-          <div className="p-4 pb-2 border-l font-medium text-[26px] col-span-2 md:col-span-1 md:px-10 md:py-4 md:text-[38px] md:text-center">
+          <div className="p-4 pb-2 border-l font-medium text-[26px] col-span-2 md:col-span-1 md:px-10 md:py-4 md:text-[38px] md:text-center border-base-900">
             Follow us
           </div>
           <div className="p-4 pt-2 col-span-2 md:col-span-1 border-l md:border-base-900 md:flex md:p-0 md:justify-center md:items-center">

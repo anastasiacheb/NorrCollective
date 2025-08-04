@@ -22,7 +22,7 @@ export default function ProductLink({ name, price, src, href }: ProductLinkProps
       />
       <div className="absolute z-40 bottom-3 text-center flex flex-col gap-1 justify-center items-center md:bottom-6 w-full">
         <h2 className="text-base font-medium leading-none backdrop-blur-sm rounded-full">{name}</h2>
-        <p className="text-base-500 text-sm font-medium backdrop-blur-sm rounded-full">price {price}</p>
+        <p className="text-base-500 text-sm font-medium backdrop-blur-sm rounded-full">price {price}$</p>
       </div>
     </Link>
   );

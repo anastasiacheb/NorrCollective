@@ -7,10 +7,17 @@ interface Props {
   children: React.ReactNode;
 }
 
+interface CartProduct {
+  src: string;
+  name: string;
+  quantity: number;
+  price: string;
+}
+
 export default function StateWrap({ children }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartProducts, setCartProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
   return (
     <CartContext value={{ cartProducts, setCartProducts }}>

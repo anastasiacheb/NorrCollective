@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { CartContext } from '@/components/CartContext';
+import { RemoveScroll } from 'react-remove-scroll';
+import React from 'react';
 
 interface CartItemProps {
   src: string;
@@ -53,74 +55,78 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
     setCartProducts((prev) => prev.filter((item) => item.name !== name));
   }
 
+  const Wrapper = isCartOpen ? RemoveScroll : React.Fragment;
+
   return (
-    <div className="w-full h-full">
-      <div
-        onClick={() => {
-          setIsCartOpen(false);
-        }}
-        className={`backdrop-blur-xs w-dvw h-full fixed top-0 ease-linear transition-opacity z-50 ${isCartOpen ? 'opacity-100 left-0' : 'opacity-0 -left-[150%]'}`}
-        style={{
-          transitionProperty: 'opacity, left',
-          transitionDuration: '300ms, 0ms',
-          transitionDelay: isCartOpen ? '0ms, 0ms' : '0ms, 300ms',
-        }}></div>
-      <div
-        className={`bg-base-0 border border-base-900 flex flex-col fixed top-0 h-dvh w-full lg:w-1/2 z-50 ${isCartOpen ? 'right-0' : '-right-full'} transition-all ease-linear duration-300`}>
-        <div className="px-6 py-3 border-b border-base-900 flex items-center justify-between md:px-10 md:py-4 lg:py-8.25">
-          <p className="text-base font-medium leading-none md:leading-tight">Shopping Cart</p>
-          <button
-            onClick={() => {
-              setIsCartOpen(false);
-            }}>
-            <img src="/icons/close_button.svg" alt="close" className="size-6" />
-          </button>
-        </div>
-        <div className="overflow-y-auto mb-12 md:mb-14">
-          {cartProducts.length > 0 ? (
-            <>
-              {cartProducts.map((cartProd, index) => (
-                <CartItem
-                  onClick={() => handleRemove(cartProd.name)}
-                  key={index}
-                  {...cartProd}
-                  price={Number(cartProd.price)}
-                />
-              ))}
-              <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
-                <p className="text-lg font-medium leading-snug">Subtotal</p>
-                <p className="text-lg font-medium leading-snug md:text-xl">
-                  ${cartProducts.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0)}
-                </p>
-              </div>
-            </>
-          ) : (
-            <div className="h-[calc(100vh-100px)] md:h-[calc(100vh-115px)] lg:h-[calc(100vh-150px)] flex items-center justify-center flex-col gap-2 overflow-hidden">
-              <p className="text-lg font-medium leading-none md:leading-tight text-center ">Your Cart is empty</p>
-              <Link
-                onClick={() => {
-                  setIsCartOpen(false);
-                }}
-                href="/shop"
-                className="text-lg font-medium leading-none md:leading-tight border-b border-base-900">
-                Shop Now
-              </Link>
-            </div>
-          )}
-        </div>
-        <Link
-          href="/checkout"
-          onClick={(e) => {
-            if (cartProducts.length === 0) {
-              e.preventDefault();
-            } else {
-              setIsCartOpen(false);
-            }
+    <Wrapper>
+      <div className="w-full h-full">
+        <div
+          onClick={() => {
+            setIsCartOpen(false);
           }}
-          className={` transition-all ease-linear uppercase text-sm leading-none font-medium border  md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full  ${cartProducts.length === 0 ? 'bg-base-300 border-base-300 text-base-500 cursor-not-allowed' : 'bg-base-900 text-base-0 hover:bg-base-700 hover:border-base-700 border-base-900'}`}>
-          Check out
-        </Link>
+          className={`backdrop-blur-xs w-dvw h-full fixed top-0 ease-linear transition-opacity z-50 ${isCartOpen ? 'opacity-100 left-0' : 'opacity-0 -left-[150%]'}`}
+          style={{
+            transitionProperty: 'opacity, left',
+            transitionDuration: '300ms, 0ms',
+            transitionDelay: isCartOpen ? '0ms, 0ms' : '0ms, 300ms',
+          }}></div>
+        <div
+          className={`bg-base-0 border border-base-900 flex flex-col fixed top-0 h-dvh w-full lg:w-1/2 z-50 ${isCartOpen ? 'right-0' : '-right-full'} transition-all ease-linear duration-300`}>
+          <div className="px-6 py-3 border-b border-base-900 flex items-center justify-between md:px-10 md:py-4 lg:py-8.25">
+            <p className="text-base font-medium leading-none md:leading-tight">Shopping Cart</p>
+            <button
+              onClick={() => {
+                setIsCartOpen(false);
+              }}>
+              <img src="/icons/close_button.svg" alt="close" className="size-6" />
+            </button>
+          </div>
+          <div className="overflow-y-auto mb-12 md:mb-14 scroll">
+            {cartProducts.length > 0 ? (
+              <>
+                {cartProducts.map((cartProd, index) => (
+                  <CartItem
+                    onClick={() => handleRemove(cartProd.name)}
+                    key={index}
+                    {...cartProd}
+                    price={Number(cartProd.price)}
+                  />
+                ))}
+                <div className="px-4 py-6 md:p-10 border-b border-base-900 flex items-center justify-between">
+                  <p className="text-lg font-medium leading-snug">Subtotal</p>
+                  <p className="text-lg font-medium leading-snug md:text-xl">
+                    ${cartProducts.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0)}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <div className="h-[calc(100vh-100px)] md:h-[calc(100vh-115px)] lg:h-[calc(100vh-150px)] flex items-center justify-center flex-col gap-2 overflow-hidden">
+                <p className="text-lg font-medium leading-none md:leading-tight text-center ">Your Cart is empty</p>
+                <Link
+                  onClick={() => {
+                    setIsCartOpen(false);
+                  }}
+                  href="/shop"
+                  className="text-lg font-medium leading-none md:leading-tight border-b border-base-900">
+                  Shop Now
+                </Link>
+              </div>
+            )}
+          </div>
+          <Link
+            href="/checkout"
+            onClick={(e) => {
+              if (cartProducts.length === 0) {
+                e.preventDefault();
+              } else {
+                setIsCartOpen(false);
+              }
+            }}
+            className={` transition-all ease-linear uppercase text-sm leading-none font-medium border  md:text-base h-12 md:h-14 flex items-center justify-center absolute bottom-0 w-full  ${cartProducts.length === 0 ? 'bg-base-300 border-base-300 text-base-500 cursor-not-allowed' : 'bg-base-900 text-base-0 hover:bg-base-700 hover:border-base-700 border-base-900'}`}>
+            Check out
+          </Link>
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 }
