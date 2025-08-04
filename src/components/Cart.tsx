@@ -19,6 +19,7 @@ function CartItem({ src, name, quantity, price, onClick }: CartItemProps) {
     <div className="px-4 py-6 md:p-10 border-b border-base-900 flex flex-col gap-4 md:flex-row md:items-center">
       <div className="border border-base-900 size-40 flex items-center justify-center overflow-clip flex-none">
         <Image
+          loading="eager"
           src={`/images/${src}`}
           alt="chair"
           width={0}

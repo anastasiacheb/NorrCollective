@@ -39,6 +39,8 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
       <div
         className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] ${reverse ? 'lg:order-1' : 'order-2'}`}>
         <Image
+          loading="eager"
+          fetchPriority="high"
           src={`/images/${src}`}
           alt="chair"
           width={0}
@@ -81,6 +83,7 @@ export default function Page() {
         </div>
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip">
           <Image
+            loading="eager"
             src="/images/DSC_4376-1.jpg"
             alt="chair"
             width={0}

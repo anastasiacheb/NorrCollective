@@ -13,6 +13,7 @@ export default function ProductLink({ name, price, src, href }: ProductLinkProps
       href={href}
       className="lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip relative">
       <Image
+        loading="eager"
         src={`/images/${src}`}
         alt="chair"
         width={0}

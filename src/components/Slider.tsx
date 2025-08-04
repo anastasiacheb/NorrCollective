@@ -30,6 +30,7 @@ export default function Slider({ Images }: { Images: string[] }) {
       {Images.map((image, index) => (
         <SwiperSlide key={index}>
           <Image
+            loading="eager"
             src={`/images/${image}`}
             alt="chair"
             width={0}

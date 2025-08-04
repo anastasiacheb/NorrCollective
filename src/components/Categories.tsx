@@ -27,6 +27,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
         href={`/shop${href}`}
         className={`h-[50vw] lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip flex items-center ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
         <Image
+          loading="eager"
           src={`/images/${src1}`}
           alt="chair"
           width={0}

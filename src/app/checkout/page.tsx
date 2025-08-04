@@ -16,6 +16,7 @@ function CheckoutItem({ src, name, quantity, price }: CheckoutItemProps) {
     <div className="flex flex-col gap-4 md:flex-row md:items-center">
       <div className="border border-base-900 size-40 flex items-center justify-center overflow-clip flex-none">
         <Image
+          loading="eager"
           src={`/images/${src}`}
           alt="chair"
           width={0}

@@ -34,6 +34,7 @@ export default function Home() {
           <div className="pt-4 border-t border-base-900 grid grid-cols-2 md:pt-6">
             <div className="pr-4 border-r border-base-900 md:pr-6">
               <Image
+                loading="eager"
                 src="/images/DSC_2877-scaled.jpg"
                 alt="chair"
                 width={0}
@@ -118,6 +119,7 @@ export default function Home() {
         <div className="border-b border-base-900 lg:order-2 grid grid-cols-2">
           <div className="border-b border-l border-base-900 col-span-2 overflow-clip lg:h-[calc(100dvh-92px-79px)] flex items-center justify-center">
             <Image
+              loading="eager"
               src="/images/request-trade-img-optimized.png"
               alt="chair"
               width={0}
