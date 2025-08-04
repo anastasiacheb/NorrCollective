@@ -1,7 +1,7 @@
 'use client';
-import { useContext, useState, useRef } from 'react';
+import { useContext, useState, useRef, useLayoutEffect } from 'react';
 import { CartContext } from '@/components/CartContext';
-import { Button } from '@/components';
+import { Button, Input, DatePicker, TimeSelect } from '@/components';
 import Image from 'next/image';
 
 interface CheckoutItemProps {
@@ -35,9 +35,105 @@ function CheckoutItem({ src, name, quantity, price }: CheckoutItemProps) {
   );
 }
 
+interface BreadCrumpProps {
+  text: string;
+  step: number;
+  activeStep: number;
+}
+
+function BreadCrump({ text, step, activeStep }: BreadCrumpProps) {
+  return (
+    <div className="flex gap-2 items-center">
+      <p
+        className={`text-xs font-medium uppercase md:text-sm transition-color ease-linear duration-200 ${activeStep === step ? 'text-base-900' : 'text-base-500'}`}>
+        {text}
+      </p>
+      <svg
+        className={`transition-color ease-linear duration-200 ${activeStep === step ? 'text-base-900' : 'text-base-500'}`}
+        width="6"
+        height="10"
+        viewBox="0 0 6 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1L1 0L5 4L6 5L5 6L1 10L0 9L4 5" fill="currentColor" />
+      </svg>
+    </div>
+  );
+}
+
+interface CheckoutStepProps {
+  step: number;
+  title: string;
+  beforeSlot?: React.ReactNode;
+  afterSlot: React.ReactNode;
+  activeStep: number;
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+}
+
+function CheckoutStep({ step, title, beforeSlot, afterSlot, activeStep, setActiveStep }: CheckoutStepProps) {
+  const stepRef = useRef<HTMLDivElement>(null);
+  const logRef = useRef<HTMLDivElement>(null);
+
+  const [measuredHeight, setMeasuredHeight] = useState('0px');
+
+  useLayoutEffect(() => {
+    if (stepRef.current && activeStep === step) {
+      setMeasuredHeight(`${stepRef.current.scrollHeight}px`);
+    }
+  }, [activeStep, step]);
+
+  return (
+    <div
+      className={`pb-6 border-b transition-color ease-linear duration-200 ${activeStep > step ? 'border-base-900' : 'border-base-300'}`}>
+      {beforeSlot && (
+        <div
+          ref={logRef}
+          style={{ maxHeight: activeStep === step ? logRef.current?.scrollHeight + 'px' : '0px' }}
+          className={`overflow-hidden transition-all ease-linear duration-300 ${activeStep === step ? 'max-h-none' : 'max-h-0'}`}>
+          {beforeSlot}
+        </div>
+      )}
+      <div className="flex items-center justify-between">
+        <div className="flex gap-1 items-center">
+          <img
+            src="/icons/check_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="check"
+            className={`size-6 transition-color ease-linear duration-200 ${activeStep > step ? 'block' : 'hidden'}`}
+          />
+          <h2
+            className={`text-lg font-medium leading-snug transition-color ease-linear duration-200 ${activeStep < step ? 'text-base-300' : 'text-base-900'}`}>
+            <span>{step} </span>
+            {title}
+          </h2>
+        </div>
+        <button onClick={() => setActiveStep(step)}>
+          <img
+            src="/icons/edit_square.svg"
+            alt="check"
+            className={`size-6 transition-color ease-linear duration-200 ${activeStep > step ? 'block' : 'hidden'}`}
+          />
+        </button>
+      </div>
+      {afterSlot && (
+        <div
+          ref={stepRef}
+          // style={{ maxHeight: activeStep === step ? stepRef.current?.scrollHeight + 'px' : '0px' }}
+          style={{
+            maxHeight: activeStep === step ? measuredHeight : '0px',
+          }}
+          className={`flex flex-col overflow-hidden transition-all ease-linear duration-300 ${activeStep === step ? 'max-h-none' : 'max-h-0'}`}>
+          {afterSlot}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Page() {
   const [infoIsOpen, setInfoIsOpen] = useState(true);
   const info = useRef<HTMLDivElement>(null);
+
+  const [activeStep, setActiveStep] = useState(1);
 
   const cart = useContext(CartContext);
   if (!cart) return null;
@@ -117,7 +213,93 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="lg:order-1 border-b border-l border-base-900 py-10 px-4 md:px-20"></div>
+      <div className="lg:order-1 border-b border-l border-base-900 py-10 px-4 md:px-20 flex flex-col gap-8 md:gap-10 lg:sticky lg:top-23 self-start lg:h-[calc(100dvh-92px)]">
+        <div className="flex gap-3">
+          <BreadCrump step={1} text="Information" activeStep={activeStep} />
+          <BreadCrump step={2} text="Shipping" activeStep={activeStep} />
+          <BreadCrump step={3} text="Payment" activeStep={activeStep} />
+        </div>
+        <CheckoutStep
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          step={1}
+          title="Contact information"
+          beforeSlot={
+            <div className="bg-base-300 px-4 py-6 md:p-10 text-base leading-snug mb-6">
+              Already have an account? <button className="underline underline-offset-4">Log in</button> for faster
+              checkout
+            </div>
+          }
+          afterSlot={
+            <>
+              <div className="py-4 flex flex-col gap-3">
+                <Input type="text" name="name" placeholder="Your Name" />
+                <Input type="email" name="email" placeholder="Your Email" />
+                <Input type="tel" name="phone" placeholder="Your Phone number *" />
+              </div>
+              <Button onClick={() => setActiveStep(activeStep + 1)} text="Continue to shipping" />
+            </>
+          }
+        />
+        <CheckoutStep
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          step={2}
+          title="Shipping details"
+          afterSlot={
+            <>
+              <div className="py-4 flex flex-col gap-3">
+                <Input type="text" name="name2" placeholder="Recipient Name" />
+                <Input type="tel" name="phone2" placeholder="Recipient Phone number *" />
+                <DatePicker />
+                <TimeSelect />
+                <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
+                  <Input type="text" name="street" placeholder="Street" />
+                  <Input type="text" name="apartment" placeholder="Apartment Number" />
+                </div>
+              </div>
+              <Button onClick={() => setActiveStep(activeStep + 1)} text="Continue to Payment" />
+            </>
+          }
+        />
+        <CheckoutStep
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          step={3}
+          title="Payment"
+          afterSlot={
+            <>
+              <div className="py-4 flex flex-col gap-3">
+                <p className="font-medium text-base">Pay by card. Your payment is secure.</p>
+                <Input type="tel" name="cardnum" placeholder="Card Number" />
+                <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
+                  <Input type="tel" name="carddate" placeholder="MM / YY" />
+                  <Input type="tel" name="cardcvv" placeholder="CVV Code" />
+                </div>
+              </div>
+              <Button text="make a purchase" />
+              <div className="pt-4 flex flex-col gap-3">
+                <p className="font-medium text-base">Or pay using:</p>
+                <button className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center gap-1">
+                  <img src="/icons/Google.svg" alt="google icon" className="size-6" />
+                  Google Pay
+                </button>
+                <button className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center gap-1 group">
+                  <div className="relative">
+                    <img src="/icons/Apple.svg" alt="apple icon" className="size-6" />
+                    <img
+                      src="/icons/Apple2.svg"
+                      alt="apple icon"
+                      className="size-6 absolute top-0 opacity-0 group-hover:opacity-100 transition-all ease-linear"
+                    />
+                  </div>
+                  Apple Pay
+                </button>
+              </div>
+            </>
+          }
+        />
+      </div>
     </section>
   );
 }

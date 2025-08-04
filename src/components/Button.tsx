@@ -1,8 +1,14 @@
-export default function Button({ text }: { text: string }) {
+interface ButtonProps {
+  text: string;
+  onClick?: () => void;
+}
+
+export default function Button({ text, onClick }: ButtonProps) {
   return (
     <button
-      type="submit"
-      className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center hover:border-base-700">
+      onClick={onClick}
+      // type="submit"
+      className="bg-base-900 text-base-0 hover:bg-base-700 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center hover:border-base-700 flex-none">
       {text}
     </button>
   );
