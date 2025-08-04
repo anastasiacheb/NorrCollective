@@ -37,16 +37,16 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
   return (
     <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
       <div
-        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] ${reverse ? 'lg:order-1' : 'order-2'}`}>
+        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative ${reverse ? 'lg:order-1' : 'order-2'}`}>
         <Image
           loading="eager"
-          fetchPriority="high"
           src={`/images/${src}`}
           alt="chair"
+          fill
           width={0}
           height={0}
           sizes="100vw"
-          className="w-full h-auto aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto lg:h-[calc(100dvh-92px)]"
+          className="w-full h-auto object-cover"
         />
       </div>
       <div
@@ -81,15 +81,17 @@ export default function Page() {
             ))}
           </div>
         </div>
-        <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip">
+        <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative">
           <Image
             loading="eager"
+            fetchPriority="high"
             src="/images/DSC_4376-1.jpg"
             alt="chair"
+            fill
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
+            className="w-full h-full object-cover"
           />
         </div>
       </header>
