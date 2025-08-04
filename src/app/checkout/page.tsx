@@ -176,15 +176,8 @@ export default function Page() {
               <div className="py-6 border-b border-base-300">
                 <p className="text-base pb-4">If you have our gift card, enter the code to get discounts</p>
                 <form action="#" className="flex flex-col gap-4 md:grid md:grid-cols-2">
-                  <input
-                    required
-                    type="tel"
-                    name="giftcard"
-                    id="giftcard"
-                    placeholder="Gift card"
-                    className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center bg-base-0"
-                  />
-                  <Button text="Apply" />
+                  <Input name="giftcard" type="tel" required placeholder="Gift card" />
+                  <Button submit text="Apply" />
                 </form>
               </div>
               <div className="py-6 border-b border-base-300">

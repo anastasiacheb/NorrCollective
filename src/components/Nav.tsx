@@ -43,7 +43,6 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
-  const Wrapper = isOpen && isMobile ? RemoveScroll : React.Fragment;
   return (
     <nav className="flex justify-between items-center border border-base-900 lg:grid lg:grid-cols-8 fixed top-0 w-full z-50 bg-base-0">
       <div
@@ -64,7 +63,7 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
         className="p-3 md:p-4 lg:hidden border-r border-base-900">
         <img src="/icons/Menu.svg" alt="menu" className="size-6" />
       </button>
-      <Wrapper>
+      <RemoveScroll className="w-full lg:col-span-7" enabled={isOpen && isMobile}>
         <div
           className={`bg-base-0 border border-base-900 flex flex-col absolute top-0 w-full md:w-1/2 lg:flex-row lg:static lg:w-full lg:border-none lg:col-span-7 lg:grid lg:grid-cols-7 ${isOpen ? 'left-0' : '-left-full'} transition-all ease-linear duration-300`}>
           <div className="border-b border-base-900 lg:hidden">
@@ -131,7 +130,7 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
           </div>
           <IconLink center />
         </div>
-      </Wrapper>
+      </RemoveScroll>
       <button
         onClick={() => {
           setIsCartOpen(true);

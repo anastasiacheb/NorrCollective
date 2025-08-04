@@ -9,10 +9,8 @@ interface ModalProps {
 }
 
 export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
-  if (!isModalOpen) return null;
-
   return (
-    <RemoveScroll>
+    <RemoveScroll enabled={isModalOpen}>
       <div
         onClick={() => {
           setIsModalOpen(false);
@@ -51,7 +49,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
                 placeholder="+46 8 XXX XX XXX"
                 className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
               />
-              <Button text="continue" />
+              <Button submit text="continue" />
             </form>
             <div className="relative mb-6">
               <span

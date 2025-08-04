@@ -55,10 +55,8 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
     setCartProducts((prev) => prev.filter((item) => item.name !== name));
   }
 
-  const Wrapper = isCartOpen ? RemoveScroll : React.Fragment;
-
   return (
-    <Wrapper>
+    <RemoveScroll enabled={isCartOpen}>
       <div className="w-full h-full">
         <div
           onClick={() => {
@@ -127,6 +125,6 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
           </Link>
         </div>
       </div>
-    </Wrapper>
+    </RemoveScroll>
   );
 }
