@@ -20,7 +20,7 @@ interface Category {
 }
 
 export async function generateStaticParams() {
-  const cats: Category[] = await fetch('https://norr-collective.vercel.app/api/products').then((res) => res.json());
+  const cats: Category[] = await fetch('https://http://192.168.0.40:3001/api/products').then((res) => res.json());
 
   return cats.map((cat) => ({
     category: cat.href.replace('/', ''),
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
-  const cats: Category[] = await fetch('https://norr-collective.vercel.app/api/products').then((res) => res.json());
+  const cats: Category[] = await fetch('https://http://192.168.0.40:3001/api/products').then((res) => res.json());
   const cat = cats.find((item) => item.href.replace('/', '') === category.toLowerCase());
 
   if (!cat) {
