@@ -229,7 +229,7 @@ export default function Page() {
               <div className="py-4 flex flex-col gap-3">
                 <Input type="text" name="name" placeholder="Your Name" />
                 <Input type="email" name="email" placeholder="Your Email" />
-                <Input type="tel" name="phone" placeholder="Your Phone number *" />
+                <Input type="tel" tel name="phone" placeholder="Your Phone number *" />
               </div>
               <Button onClick={() => setActiveStep(activeStep + 1)} text="Continue to shipping" />
             </>
@@ -244,7 +244,7 @@ export default function Page() {
             <>
               <div className="py-4 flex flex-col gap-3">
                 <Input type="text" name="name2" placeholder="Recipient Name" />
-                <Input type="tel" name="phone2" placeholder="Recipient Phone number *" />
+                <Input type="tel" name="phone2" tel placeholder="Recipient Phone number *" />
                 <DatePicker />
                 <TimeSelect />
                 <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
@@ -265,7 +265,7 @@ export default function Page() {
             <>
               <div className="py-4 flex flex-col gap-3">
                 <p className="font-medium text-base">Pay by card. Your payment is secure.</p>
-                <Input type="tel" name="cardnum" placeholder="Card Number" />
+                <Input type="tel" name="cardnum" card placeholder="Card Number" />
                 <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
                   <Input type="tel" name="carddate" placeholder="MM / YY" />
                   <Input type="tel" name="cardcvv" placeholder="CVV Code" />

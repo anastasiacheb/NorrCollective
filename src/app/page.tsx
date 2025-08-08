@@ -140,7 +140,7 @@ export default function Home() {
             <h2 className="font-semibold text-[34px] md:text-[50px] mb-6 ">To Contact Us</h2>
             <p className="text-lg leading-snug font-medium mb-4">We will call you back</p>
             <form action="#" className="flex flex-col gap-4 md:grid md:grid-cols-2">
-              <Input name="phone" type="tel" required placeholder="+46 8 XXX XX XXX" />
+              <Input name="phone" type="tel" required tel placeholder="+ 46 XX XXX XX XX" />
               <Button submit text="book a call" />
             </form>
           </div>
