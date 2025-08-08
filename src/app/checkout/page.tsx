@@ -267,7 +267,7 @@ export default function Page() {
                 <p className="font-medium text-base">Pay by card. Your payment is secure.</p>
                 <Input type="tel" name="cardnum" card placeholder="Card Number" />
                 <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
-                  <Input type="tel" name="carddate" placeholder="MM / YY" />
+                  <Input type="tel" name="carddate" date placeholder="MM / YY" />
                   <Input type="tel" name="cardcvv" cvv placeholder="CVV Code" />
                 </div>
               </div>

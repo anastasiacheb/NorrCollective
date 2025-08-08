@@ -9,9 +9,10 @@ interface InputProps {
   tel?: boolean;
   card?: boolean;
   cvv?: boolean;
+  date?: boolean;
 }
 
-export default function Input({ type, name, placeholder, required, tel, card, cvv }: InputProps) {
+export default function Input({ type, name, placeholder, required, tel, card, cvv, date }: InputProps) {
   const [value, setValue] = useState('');
 
   function formatPhone(value: string) {
@@ -65,6 +66,20 @@ export default function Input({ type, name, placeholder, required, tel, card, cv
     return cvv;
   }
 
+  function formatDate(value: string) {
+    const digits = value.replace(/\D/g, '');
+
+    const part1 = digits.slice(0, 2);
+    const part2 = digits.slice(2, 4);
+
+    let date = '';
+
+    if (part1) date += part1;
+    if (part2) date += ' / ' + part2;
+
+    return date;
+  }
+
   function handleFocus() {
     if (value.length === 0) {
       setValue('+ 46 ');
@@ -88,6 +103,9 @@ export default function Input({ type, name, placeholder, required, tel, card, cv
     }
     if (cvv) {
       input = formatCvv(input);
+    }
+    if (date) {
+      input = formatDate(input);
     }
 
     setValue(input);
