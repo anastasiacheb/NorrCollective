@@ -268,7 +268,7 @@ export default function Page() {
                 <Input type="tel" name="cardnum" card placeholder="Card Number" />
                 <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
                   <Input type="tel" name="carddate" placeholder="MM / YY" />
-                  <Input type="tel" name="cardcvv" placeholder="CVV Code" />
+                  <Input type="tel" name="cardcvv" cvv placeholder="CVV Code" />
                 </div>
               </div>
               <Button text="make a purchase" />

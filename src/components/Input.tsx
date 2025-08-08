@@ -8,9 +8,10 @@ interface InputProps {
   required?: boolean;
   tel?: boolean;
   card?: boolean;
+  cvv?: boolean;
 }
 
-export default function Input({ type, name, placeholder, required, tel, card }: InputProps) {
+export default function Input({ type, name, placeholder, required, tel, card, cvv }: InputProps) {
   const [value, setValue] = useState('');
 
   function formatPhone(value: string) {
@@ -54,6 +55,16 @@ export default function Input({ type, name, placeholder, required, tel, card }: 
     return card;
   }
 
+  function formatCvv(value: string) {
+    const digits = value.replace(/\D/g, '');
+
+    let cvv = '';
+
+    cvv = digits.slice(0, 3);
+
+    return cvv;
+  }
+
   function handleFocus() {
     if (value.length === 0) {
       setValue('+ 46 ');
@@ -74,6 +85,9 @@ export default function Input({ type, name, placeholder, required, tel, card }: 
     }
     if (card) {
       input = formatCard(input);
+    }
+    if (cvv) {
+      input = formatCvv(input);
     }
 
     setValue(input);
