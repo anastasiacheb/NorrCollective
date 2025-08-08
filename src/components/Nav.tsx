@@ -61,7 +61,7 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
         }}
         aria-label="open menu"
         className="p-3 md:p-4 lg:hidden border-r border-base-900">
-        <img src="/icons/Menu.svg" alt="menu" className="size-6" />
+        <img src="/icons/Menu.svg" alt="menu" className="size-6 max-w-none max-h-none" />
       </button>
       <RemoveScroll className="w-full lg:col-span-7" enabled={isOpen && isMobile}>
         <div
@@ -138,7 +138,11 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
         aria-label="open cart"
         className="p-3 md:p-4 border-l border-base-900 md:text-xl font-medium lg:py-8 lg:border-l-0 lg:col-start-8 bg-base-0">
         <span className="hidden lg:block">Cart</span>
-        <img src="/icons/shopping_bag_FILL0_wght300_GRAD0_opsz24.svg" alt="cart" className="size-6 lg:hidden" />
+        <img
+          src="/icons/shopping_bag_FILL0_wght300_GRAD0_opsz24.svg"
+          alt="cart"
+          className="size-6 lg:hidden max-w-none max-h-none"
+        />
       </button>
     </nav>
   );

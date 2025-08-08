@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Button } from '@/components';
+import { Button, Input } from '@/components';
 import { RemoveScroll } from 'react-remove-scroll';
 
 interface ModalProps {
@@ -41,14 +41,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
             </h2>
             <p className="text-base font-medium mb-3">Use your mobile number to sign up or log in</p>
             <form action="#" className="flex flex-col gap-4 mb-6">
-              <input
-                required
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="+46 8 XXX XX XXX"
-                className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center"
-              />
+              <Input name="phone" type="tel" required tel placeholder="+ 46 XX XXX XX XX" />
               <Button submit text="continue" />
             </form>
             <div className="relative mb-6">
