@@ -36,7 +36,7 @@ export default function Input({ type, name, placeholder, required, tel, card }: 
     return phone;
   }
 
-  function formatCard(value) {
+  function formatCard(value: string) {
     const digits = value.replace(/\D/g, '');
 
     const part1 = digits.slice(0, 4);
@@ -66,7 +66,7 @@ export default function Input({ type, name, placeholder, required, tel, card }: 
     }
   }
 
-  function handleInput(e: React.InputEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     let input = e.target.value;
 
     if (tel) {
@@ -87,7 +87,7 @@ export default function Input({ type, name, placeholder, required, tel, card }: 
       id={name}
       placeholder={placeholder}
       value={value}
-      onInput={handleInput}
+      onChange={handleChange}
       onFocus={tel ? handleFocus : undefined}
       onBlur={tel ? handleBlur : undefined}
       className="text-base-900 placeholder:text-base-500 text-sm font-medium px-4 border border-base-300 hover:border-base-500 focus:placeholder:text-base-300 focus:border-base-500 outline-none transition-all ease-linear h-12 md:h-14 flex items-center bg-base-0"
