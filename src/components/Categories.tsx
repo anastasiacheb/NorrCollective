@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Products } from '@/data';
+import { Animation } from '@/components';
 
 interface CategoryItemProps {
   category: string;
@@ -26,15 +27,17 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
       <Link
         href={`/shop${href}`}
         className={`h-[50vw] lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip flex items-center ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
-        <Image
-          loading="eager"
-          src={`/images/${src1}`}
-          alt="chair"
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="w-full h-auto lg:h-full lg:w-full object-cover group-hover:scale-110 transition-all ease-linear duration-200"
-        />
+        <Animation scale className=" w-full h-full">
+          <Image
+            loading="eager"
+            src={`/images/${src1}`}
+            alt="chair"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto lg:h-full lg:w-full object-cover group-hover:scale-110 transition-all ease-linear duration-200"
+          />
+        </Animation>
       </Link>
     </div>
   );

@@ -15,4 +15,5 @@ export { default as Cart } from './Cart';
 export { default as StateWrap } from './StateWrap';
 export { default as DatePicker } from './DatePicker';
 export { default as TimeSelect } from './TimeSelect';
+export { default as Animation } from './Animation';
 export { default as CartContext } from './CartContext';
