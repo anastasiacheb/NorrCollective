@@ -4,9 +4,9 @@ import { ReactNode } from 'react';
 
 interface AnimationProps {
   children: ReactNode;
-  appear: boolean;
-  scale: boolean;
-  className: string;
+  appear?: boolean;
+  scale?: boolean;
+  className?: string;
 }
 
 export default function Animation({ children, appear, scale, className }: AnimationProps) {
