@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { PreFooter } from '@/components';
+import { PreFooter, Animation } from '@/components';
 
 const IconLinks = [
   { href: '#', name: 'Instagram' },
@@ -38,22 +38,26 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
     <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
       <div
         className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative ${reverse ? 'lg:order-1' : 'order-2'}`}>
-        <Image
-          loading="eager"
-          src={`/images/${src}`}
-          alt="chair"
-          fill
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="w-full h-auto object-cover"
-        />
+        <Animation scale className=" w-full h-full">
+          <Image
+            loading="eager"
+            src={`/images/${src}`}
+            alt="chair"
+            fill
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto object-cover"
+          />
+        </Animation>
       </div>
       <div
         className={`border-l border-b border-base-900 py-10 px-4 md:p-20 relative ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
         <div className="lg:sticky lg:top-43">
-          <h2 className="text-[26px] font-medium mb-4 md:text-[38px]">{title}</h2>
-          <p className="leading-snug">{text}</p>
+          <Animation>
+            <h2 className="text-[26px] font-medium mb-4 md:text-[38px]">{title}</h2>
+            <p className="leading-snug">{text}</p>
+          </Animation>
         </div>
       </div>
     </section>
@@ -65,45 +69,51 @@ export default function Page() {
     <>
       <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
         <div className="border-l border-b border-base-900 py-10 px-4 md:p-20 lg:flex lg:items-center lg:justify-center lg:flex-col">
-          <h1 className="font-semibold text-[34px] flex flex-col gap-6 md:text-[50px] items-center justify-center mb-6">
-            <span>Our Story</span>
-            <span>about</span>
-            <span>Norr Collective</span>
-          </h1>
-          <p className="leading-snug text-center mb-16">
-            Discover Uniquely Curated Furniture and Design Icons for Any Interior:{' '}
-            <br className="hidden md:block lg:hidden 2xl:block" />
-            Elevate Your Space with Our Carefully Selected Vintage Collection
-          </p>
-          <div className="flex gap-4 items-center justify-center md:gap-8">
-            {IconLinks.map((icon, index) => (
-              <IconLinkRoundItem key={index} {...icon} />
-            ))}
-          </div>
+          <Animation>
+            <h1 className="font-semibold text-[34px] flex flex-col gap-6 md:text-[50px] items-center justify-center mb-6">
+              <span>Our Story</span>
+              <span>about</span>
+              <span>Norr Collective</span>
+            </h1>
+            <p className="leading-snug text-center mb-16">
+              Discover Uniquely Curated Furniture and Design Icons for Any Interior:{' '}
+              <br className="hidden md:block lg:hidden 2xl:block" />
+              Elevate Your Space with Our Carefully Selected Vintage Collection
+            </p>
+            <div className="flex gap-4 items-center justify-center md:gap-8">
+              {IconLinks.map((icon, index) => (
+                <IconLinkRoundItem key={index} {...icon} />
+              ))}
+            </div>
+          </Animation>
         </div>
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative">
-          <Image
-            loading="eager"
-            fetchPriority="high"
-            src="/images/DSC_4376-1.jpg"
-            alt="chair"
-            fill
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-full object-cover"
-          />
+          <Animation scale className=" w-full h-full">
+            <Image
+              loading="eager"
+              fetchPriority="high"
+              src="/images/DSC_4376-1.jpg"
+              alt="chair"
+              fill
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-full object-cover"
+            />
+          </Animation>
         </div>
       </header>
       <section className="px-4 py-10 md:p-20 border-x border-b border-base-900 text-center">
-        <h2 className="uppercase text-xs md:text-sm font-medium mb-6">OUR STORY</h2>
-        <h3 className="text-[26px] font-medium mb-4 md:text-[38px]">A Shared Vision for Timeless Design</h3>
-        <p className="leading-snug max-w-159.5 mx-auto">
-          Norr Collective was born from a collective passion for design, form, and history. Since 2010, our team has
-          been curating authentic 20th-century furniture with character — selecting pieces that embody thoughtful
-          craftsmanship and enduring aesthetics. Our goal is to make iconic design accessible to those who value
-          timeless beauty in everyday living.
-        </p>
+        <Animation>
+          <h2 className="uppercase text-xs md:text-sm font-medium mb-6">OUR STORY</h2>
+          <h3 className="text-[26px] font-medium mb-4 md:text-[38px]">A Shared Vision for Timeless Design</h3>
+          <p className="leading-snug max-w-159.5 mx-auto">
+            Norr Collective was born from a collective passion for design, form, and history. Since 2010, our team has
+            been curating authentic 20th-century furniture with character — selecting pieces that embody thoughtful
+            craftsmanship and enduring aesthetics. Our goal is to make iconic design accessible to those who value
+            timeless beauty in everyday living.
+          </p>
+        </Animation>
       </section>
       <AboutSection
         title="Expertly Curated Design"
