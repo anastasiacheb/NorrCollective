@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <>
       <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-4">
-        <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:col-span-2 lg:h-[calc(100svh-92px)]">
+        <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:col-span-2 lg:h-[calc(100dvh-92px)]">
           <Image
             loading="eager"
             priority={true}

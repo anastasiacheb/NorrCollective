@@ -25,7 +25,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="bg-base-0 px-4 py-10 md:p-20 border border-base-900 h-dvh lg:h-[calc(100svh-92px)] absolute top-0 lg:top-23 lg:max-w-180 w-full lg:left-1/2 lg:-translate-x-1/2 flex flex-col justify-between">
+          className="bg-base-0 px-4 py-10 md:p-20 border border-base-900 h-dvh lg:h-[calc(100dvh-92px)] absolute top-0 lg:top-23 lg:max-w-180 w-full lg:left-1/2 lg:-translate-x-1/2 flex flex-col justify-between">
           <button
             onClick={() => {
               setIsModalOpen(false);

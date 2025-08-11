@@ -142,7 +142,7 @@ export default function Page() {
 
   return (
     <section className="border-r border-base-900 lg:grid lg:grid-cols-2 mt-12.5 md:mt-14.5 lg:mt-23">
-      <div className="bg-base-100 px-4 py-6 border-b border-l border-base-900 md:px-20 md:py-10 lg:order-2 lg:min-h-[calc(100svh-92px)] flex flex-col">
+      <div className="bg-base-100 px-4 py-6 border-b border-l border-base-900 md:px-20 md:py-10 lg:order-2 lg:min-h-[calc(100dvh-92px)] flex flex-col">
         <div onClick={() => setInfoIsOpen(!infoIsOpen)} className="flex items-center justify-between">
           <button className="flex items-center gap-2">
             <img
@@ -207,7 +207,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="lg:order-1 border-b border-l border-base-900 py-10 px-4 md:px-20 flex flex-col gap-8 md:gap-10 lg:sticky lg:top-23 self-start lg:h-[calc(100svh-92px)]">
+      <div className="lg:order-1 border-b border-l border-base-900 py-10 px-4 md:px-20 flex flex-col gap-8 md:gap-10 lg:sticky lg:top-23 self-start lg:h-[calc(100dvh-92px)]">
         <div className="flex gap-3">
           <BreadCrump step={1} text="Information" activeStep={activeStep} />
           <BreadCrump step={2} text="Shipping" activeStep={activeStep} />
