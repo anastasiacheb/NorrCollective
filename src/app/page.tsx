@@ -42,7 +42,7 @@ export default function Home() {
                 alt="chair"
                 width={0}
                 height={0}
-                sizes="100vw"
+                sizes="100%"
                 className="w-full h-auto aspect-[155/180] object-cover md:aspect-[280/256] lg:aspect-auto 2xl:aspect-square"
               />
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
                 alt="chair"
                 width={0}
                 height={0}
-                sizes="100vw"
+                sizes="100%"
                 className="w-full h-full object-cover aspect-[375/420] md:aspect-[768/500] lg:aspect-auto"
               />
             </Animation>

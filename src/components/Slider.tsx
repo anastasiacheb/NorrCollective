@@ -35,7 +35,7 @@ export default function Slider({ Images }: { Images: string[] }) {
             alt="chair"
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="100%"
             className="w-full h-full object-cover"
           />
         </SwiperSlide>

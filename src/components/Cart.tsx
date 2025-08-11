@@ -24,7 +24,7 @@ function CartItem({ src, name, quantity, price, onClick }: CartItemProps) {
           alt="chair"
           width={0}
           height={0}
-          sizes="100vw"
+          sizes="100%"
           className="w-full h-auto object-cover "
         />
       </div>

@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
             alt="chair"
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="100%"
             className="w-full h-full aspect-[375/420] object-cover md:aspect-[768/500] lg:aspect-auto"
           />
           <div className="bg-base-900/50 w-full h-full absolute"></div>

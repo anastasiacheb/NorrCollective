@@ -47,7 +47,7 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
             fill
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="100%"
             className="w-full h-auto object-cover"
           />
         </Animation>
@@ -98,7 +98,7 @@ export default function Page() {
               fill
               width={0}
               height={0}
-              sizes="100vw"
+              sizes="100%"
               className="w-full h-full object-cover"
             />
           </Animation>

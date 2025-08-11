@@ -20,7 +20,7 @@ export default function ProductLink({ name, price, src, href }: ProductLinkProps
           alt="chair"
           width={0}
           height={0}
-          sizes="100vw"
+          sizes="100%"
           className="w-full h-full aspect-square object-cover lg:aspect-auto group-hover:scale-110 transition-all ease-linear duration-200"
         />
       </Animation>
