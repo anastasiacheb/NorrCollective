@@ -9,6 +9,7 @@ export default function Page() {
           <Image
             loading="eager"
             priority={true}
+            fetchPriority="high"
             src="/images/DSC_1191.jpg"
             alt="chair"
             width={0}

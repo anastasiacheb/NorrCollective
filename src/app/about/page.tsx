@@ -42,6 +42,7 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
           <Image
             loading="eager"
             priority={true}
+            fetchPriority="high"
             src={`/images/${src}`}
             alt="chair"
             fill

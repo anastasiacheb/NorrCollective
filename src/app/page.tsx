@@ -38,6 +38,7 @@ export default function Home() {
               <Image
                 loading="eager"
                 priority={true}
+                fetchPriority="high"
                 src="/images/DSC_2877-scaled.jpg"
                 alt="chair"
                 width={0}

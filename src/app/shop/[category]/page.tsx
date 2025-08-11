@@ -43,6 +43,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
           <Image
             loading="eager"
             priority={true}
+            fetchPriority="high"
             src={`/images/${cat.src2}`}
             alt="chair"
             width={0}
