@@ -30,6 +30,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
         <Animation scale className=" w-full h-full">
           <Image
             loading="eager"
+            priority
             src={`/images/${src1}`}
             alt="chair"
             width={0}

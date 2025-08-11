@@ -12,7 +12,7 @@ function ChooseItem({ title, text, last }: ChooseItemProps) {
   return (
     <div className={`px-4 py-10 md:p-20 border-l ${!last && 'border-b'}  border-base-900`}>
       <Animation>
-        <h4 className="text-[26px] font-medium pb-4 md:text-[38px]">{title}</h4>
+        <h3 className="text-[26px] font-medium pb-4 md:text-[38px]">{title}</h3>
         <p className="leading-snug">{text}</p>
       </Animation>
     </div>
@@ -81,6 +81,7 @@ export default function Home() {
             </p>
             <Link
               href="/about"
+              aria-label="About NorrCollective"
               className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center w-full md:w-44">
               Learn more
             </Link>
