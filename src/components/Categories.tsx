@@ -15,7 +15,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
     <div className={`grid grid-cols-2 h-[50vw] lg:h-[calc((100dvh-92px)/2)]`}>
       <Link
         href={`/shop${href}`}
-        className={`p-3 md:p-6 border-l border-b border-base-900 flex items-center justify-center relative group h-[50vw] lg:h-[calc((100vh-92px)/2)] ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
+        className={`p-3 md:p-6 border-l border-b border-base-900 flex items-center justify-center relative group h-[50vw] lg:h-[calc((100dvh-92px)/2)] ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
         <h2 className="font-medium text-[26px] md:text-[38px] capitalize">{category}</h2>
         <div className="flex gap-1 absolute bottom-3 md:bottom-6 items-center group border-b border-transparent group-hover:border-base-900 transition-all ease-linear duration-150">
           <p className="font-semibold text-sm md:text-base group-hover:text-base-500 group-active:text-base-900 transition-colors ease-linear duration-150">
