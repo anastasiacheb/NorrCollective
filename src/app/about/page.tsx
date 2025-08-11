@@ -41,6 +41,7 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
         <Animation scale className=" w-full h-full">
           <Image
             loading="eager"
+            priority
             src={`/images/${src}`}
             alt="chair"
             fill
