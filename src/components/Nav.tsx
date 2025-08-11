@@ -83,7 +83,7 @@ export default function Nav({ setIsModalOpen, setIsCartOpen }: ModalProps) {
             }}
             name="Sign in"
             button
-            className="lg:col-start-7 lg:border-l lg:-ml-[0.5px]"
+            className="lg:col-start-7 lg:border-l lg:-ml-[0.5px] xl:ml-0"
           />
           <NavLink
             onClick={() => {
