@@ -35,7 +35,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
             alt="chair"
             width={0}
             height={0}
-            sizes="100%"
+            sizes="50vw"
             className="w-full h-auto lg:h-full lg:w-full object-cover group-hover:scale-110 transition-all ease-linear duration-200"
           />
         </Animation>
