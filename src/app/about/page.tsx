@@ -93,6 +93,7 @@ export default function Page() {
             <Image
               loading="eager"
               priority={true}
+              fetchPriority="high"
               src="/images/DSC_4376-1.jpg"
               alt="chair"
               fill
