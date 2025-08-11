@@ -41,7 +41,7 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
             </h2>
             <p className="text-base font-medium mb-3">Use your mobile number to sign up or log in</p>
             <form action="#" className="flex flex-col gap-4 mb-6">
-              <Input name="phone" type="tel" required tel placeholder="+ 46 XX XXX XX XX" />
+              <Input name="phone2" type="tel" required tel placeholder="+ 46 XX XXX XX XX" />
               <Button submit text="continue" />
             </form>
             <div className="relative mb-6">
@@ -59,14 +59,14 @@ export default function Modal({ isModalOpen, setIsModalOpen }: ModalProps) {
                 continue with google
               </button>
               <button className="bg-base-0 text-base-900 hover:bg-base-900 hover:text-base-0 transition-all ease-linear uppercase text-sm leading-none font-medium border border-base-900 md:text-base h-12 md:h-14 flex items-center justify-center gap-1 group">
-                <div className="relative">
+                <span className="relative block">
                   <img src="/icons/Apple.svg" alt="apple icon" className="size-6" />
                   <img
                     src="/icons/Apple2.svg"
                     alt="apple icon"
                     className="size-6 absolute top-0 opacity-0 group-hover:opacity-100 transition-all ease-linear"
                   />
-                </div>
+                </span>
                 continue with apple
               </button>
             </div>
