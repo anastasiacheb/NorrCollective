@@ -99,7 +99,7 @@ export default function Cart({ isCartOpen, setIsCartOpen }: CartProps) {
                 </div>
               </>
             ) : (
-              <div className="h-[calc(100vh-100px)] md:h-[calc(100vh-115px)] lg:h-[calc(100vh-150px)] flex items-center justify-center flex-col gap-2 overflow-hidden">
+              <div className="h-[calc(100svh-100px)] md:h-[calc(100svh-115px)] lg:h-[calc(100svh-150px)] flex items-center justify-center flex-col gap-2 overflow-hidden">
                 <p className="text-lg font-medium leading-none md:leading-tight text-center ">Your Cart is empty</p>
                 <Link
                   onClick={() => {

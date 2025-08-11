@@ -56,7 +56,7 @@ export default function ProductPage({ prod, cat }: Props) {
   return (
     <>
       <div
-        className={`text-base-0 bg-base-900 flex p-4 gap-1 items-center w-fit absolute top-16 md:top-17 left-1/2 -translate-x-1/2 z-50 lg:right-10 lg:translate-0 lg:bottom-30 lg:top-auto lg:left-auto ${toastIsVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-linear`}>
+        className={`text-base-0 bg-base-900 flex p-4 gap-1 items-center w-fit fixed lg:absolute top-16 md:top-17 left-1/2 -translate-x-1/2 z-50 lg:right-10 lg:translate-0 lg:bottom-30 lg:top-auto lg:left-auto ${toastIsVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-linear`}>
         <img
           src={`/icons/${firstAdd ? 'Correct.svg' : 'error-warning.svg'}`}
           alt={`${firstAdd ? 'success' : 'error'} icon`}
