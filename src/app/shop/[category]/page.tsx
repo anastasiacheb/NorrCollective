@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:h-[calc(100dvh-92px)] self-start">
           <Image
             loading="eager"
-            priority
+            priority={true}
             src={`/images/${cat.src2}`}
             alt="chair"
             width={0}

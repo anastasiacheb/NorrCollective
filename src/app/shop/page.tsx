@@ -8,7 +8,7 @@ export default function Page() {
         <div className="border-l border-b border-base-900 flex items-center justify-center overflow-clip relative lg:sticky lg:top-23 lg:col-span-2 lg:h-[calc(100dvh-92px)]">
           <Image
             loading="eager"
-            priority
+            priority={true}
             src="/images/DSC_1191.jpg"
             alt="chair"
             width={0}

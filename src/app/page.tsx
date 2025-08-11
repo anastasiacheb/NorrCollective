@@ -37,7 +37,7 @@ export default function Home() {
             <div className="pr-4 border-r border-base-900 md:pr-6">
               <Image
                 loading="eager"
-                priority
+                priority={true}
                 src="/images/DSC_2877-scaled.jpg"
                 alt="chair"
                 width={0}

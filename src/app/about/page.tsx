@@ -41,7 +41,7 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
         <Animation scale className=" w-full h-full">
           <Image
             loading="eager"
-            priority
+            priority={true}
             src={`/images/${src}`}
             alt="chair"
             fill
@@ -92,7 +92,7 @@ export default function Page() {
           <Animation scale className=" w-full h-full">
             <Image
               loading="eager"
-              fetchPriority="high"
+              priority={true}
               src="/images/DSC_4376-1.jpg"
               alt="chair"
               fill
