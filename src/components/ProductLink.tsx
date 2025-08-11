@@ -12,7 +12,7 @@ export default function ProductLink({ name, price, src, href }: ProductLinkProps
   return (
     <Link
       href={href}
-      className="lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip relative">
+      className="lg:h-[calc((100svh-92px)/2)] border-l border-b border-base-900 group overflow-clip relative">
       <Animation scale className=" w-full h-full">
         <Image
           loading="eager"

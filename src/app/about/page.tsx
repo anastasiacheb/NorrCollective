@@ -35,9 +35,9 @@ interface AboutSectionProps {
 
 function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
   return (
-    <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+    <section className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100svh-92px)]">
       <div
-        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100dvh-92px)] aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative ${reverse ? 'lg:order-1' : 'order-2'}`}>
+        className={`border-l border-b border-base-900 flex items-center justify-center overflow-clip lg:h-[calc(100svh-92px)] aspect-[375/420] md:aspect-[768/500] lg:aspect-auto relative ${reverse ? 'lg:order-1' : 'order-2'}`}>
         <Animation scale className=" w-full h-full">
           <Image
             loading="eager"
@@ -69,7 +69,7 @@ function AboutSection({ title, text, src, reverse }: AboutSectionProps) {
 export default function Page() {
   return (
     <>
-      <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+      <header className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100svh-92px)]">
         <div className="border-l border-b border-base-900 py-10 px-4 md:p-20 lg:flex lg:items-center lg:justify-center lg:flex-col">
           <Animation>
             <h1 className="font-semibold text-[34px] flex flex-col gap-6 md:text-[50px] items-center justify-center mb-6">

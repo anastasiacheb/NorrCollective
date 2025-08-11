@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <header className="border-r border-base-900 lg:grid lg:grid-cols-4 mt-12.5 md:mt-14.5 lg:mt-23">
-        <div className="px-4 py-10 md:p-20 border-l border-b border-base-900 flex flex-col gap-6 md:gap-14 lg:h-[calc(100dvh-92px)] lg:justify-between lg:gap-6 lg:sticky lg:top-23 lg:self-start lg:col-span-2">
+        <div className="px-4 py-10 md:p-20 border-l border-b border-base-900 flex flex-col gap-6 md:gap-14 lg:h-[calc(100svh-92px)] lg:justify-between lg:gap-6 lg:sticky lg:top-23 lg:self-start lg:col-span-2">
           <Animation appear>
             <h1 className="text-[40px] pb-4 font-semibold md:text-[67px]">
               Norr <br /> Collective
@@ -130,9 +130,9 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)] scroll-mt-12.5 md:scroll-mt-14.5 lg:scroll-mt-23">
+        className="border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100svh-92px)] scroll-mt-12.5 md:scroll-mt-14.5 lg:scroll-mt-23">
         <div className="border-b border-base-900 lg:order-2 grid grid-cols-2">
-          <div className="border-b border-l border-base-900 col-span-2 overflow-clip lg:h-[calc(100dvh-92px-79px)] flex items-center justify-center">
+          <div className="border-b border-l border-base-900 col-span-2 overflow-clip lg:h-[calc(100svh-92px-79px)] flex items-center justify-center">
             <Animation scale className=" w-full h-full">
               <Image
                 loading="eager"
@@ -152,7 +152,7 @@ export default function Home() {
             <IconLink />
           </div>
         </div>
-        <div className="border-l border-b border-base-900 md:grid md:grid-cols-2 lg:grid-rows-2 lg:h-[calc(100dvh-90px)]">
+        <div className="border-l border-b border-base-900 md:grid md:grid-cols-2 lg:grid-rows-2 lg:h-[calc(100svh-90px)]">
           <div className="py-10 px-4 md:p-20 border-b border-base-900 md:col-span-2">
             <h2 className="font-semibold text-[34px] md:text-[50px] mb-6 ">To Contact Us</h2>
             <p className="text-lg leading-snug font-medium mb-4">We will call you back</p>

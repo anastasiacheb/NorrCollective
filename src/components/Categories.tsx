@@ -12,7 +12,7 @@ interface CategoryItemProps {
 
 function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
   return (
-    <div className={`grid grid-cols-2 h-[50vw] lg:h-[calc((100dvh-92px)/2)]`}>
+    <div className={`grid grid-cols-2 h-[50vw] lg:h-[calc((100svh-92px)/2)]`}>
       <Link
         href={`/shop${href}`}
         className={`p-3 md:p-6 border-l border-b border-base-900 flex items-center justify-center relative group h-[50vw] lg:h-[calc((100vh-92px)/2)] ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
@@ -26,7 +26,7 @@ function CategoryItem({ category, src1, href, index }: CategoryItemProps) {
       </Link>
       <Link
         href={`/shop${href}`}
-        className={`h-[50vw] lg:h-[calc((100dvh-92px)/2)] border-l border-b border-base-900 group overflow-clip flex items-center ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
+        className={`h-[50vw] lg:h-[calc((100svh-92px)/2)] border-l border-b border-base-900 group overflow-clip flex items-center ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
         <Animation scale className=" w-full h-full">
           <Image
             loading="eager"

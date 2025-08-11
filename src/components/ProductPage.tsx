@@ -64,7 +64,7 @@ export default function ProductPage({ prod, cat }: Props) {
         />
         <p className="whitespace-nowrap">{firstAdd ? 'Added to cart' : 'Already added to cart'}</p>
       </div>
-      <section className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
+      <section className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100svh-92px)]">
         <Slider Images={prod.src} />
         <div className="border-l border-b border-base-900 px-4 py-10 md:p-10 flex flex-col gap-6 justify-between">
           <div className="flex flex-col gap-6">
