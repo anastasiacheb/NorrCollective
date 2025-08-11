@@ -29,18 +29,19 @@ export default function ProductPage({ prod, cat }: Props) {
   const [firstAdd, setFirstAdd] = useState(true);
 
   const cart = useContext(CartContext);
-  if (!cart) return null;
-  const { cartProducts, setCartProducts } = cart;
 
   useEffect(() => {
-    if (!toastIsVisible) return;
+    if (toastIsVisible) {
+      const timer = setTimeout(() => {
+        setToastIsVisible(false);
+      }, 2000);
 
-    const timer = setTimeout(() => {
-      setToastIsVisible(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, [toastIsVisible, setToastIsVisible]);
+
+  if (!cart) return null;
+  const { cartProducts, setCartProducts } = cart;
 
   function handleAdd() {
     setToastIsVisible(true);
