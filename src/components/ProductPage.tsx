@@ -62,7 +62,7 @@ export default function ProductPage({ prod, cat }: Props) {
           alt={`${firstAdd ? 'success' : 'error'} icon`}
           className="size-4"
         />
-        <p>{firstAdd ? 'Added to cart' : 'Already added to cart'}</p>
+        <p className="whitespace-nowrap">{firstAdd ? 'Added to cart' : 'Already added to cart'}</p>
       </div>
       <section className="mt-12.5 md:mt-14.5 lg:mt-23 border-r border-base-900 lg:grid lg:grid-cols-2 lg:h-[calc(100dvh-92px)]">
         <Slider Images={prod.src} />
